@@ -158,4 +158,5 @@ main.pdf
 
 # kaggle data
 data/*.csv
+data/*/*.csv
 
