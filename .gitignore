@@ -155,3 +155,7 @@ dmypy.json
 *.run.xml
 *.bcf
 main.pdf
+
+# kaggle data
+data/*.csv
+
