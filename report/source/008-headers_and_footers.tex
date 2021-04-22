@@ -1,0 +1,34 @@
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+
+\newcommand\lheadcontent{Left (Outer) Side}
+\newcommand\cheadcontent{Center}
+\newcommand\rheadcontent{Right (Inner) Side}
+
+\newcommand\lfootcontent{}
+\newcommand\cfootcontent{\leftmark}
+\newcommand\rfootcontent{Page \thepage}
+
+\ifdigitalcopy
+
+\lhead{\lheadcontent}
+\rhead{\rheadcontent}
+
+\lfoot{\lfootcontent}
+\rfoot{\rfootcontent}
+
+\else
+
+\fancyhead[LE,RO]{\lheadcontent}
+\fancyhead[LO,RE]{\rheadcontent}
+
+\fancyfoot[LE,RO]{\lfootcontent}
+\fancyfoot[LO,RE]{\rfootcontent}
+
+\fi
+
+\chead{\cheadcontent}
+\cfoot{\cfootcontent}

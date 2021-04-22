@@ -132,3 +132,26 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# LaTeX Stuff
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.synctex.gz
+*.acn
+*.acr
+*.alg
+*.glg
+*.glo
+*.gls
+*.ist
+*.toc
+*.lof
+*.lol
+*.lot
+*.run.xml
+*.bcf
+main.pdf
