@@ -15,6 +15,7 @@ seaborn = "^0.11.1"
 matplotlib = "^3.4.1"
 xlrd = "^2.0.1"
 autoviz = "^0.0.81"
+lightgbm = "^3.2.1"
 
 [tool.poetry.dev-dependencies]
 
