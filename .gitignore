@@ -162,3 +162,6 @@ data/*/*.csv
 
 # intellij data
 *.idea/
+
+# macOS stuff
+.DS_Store
