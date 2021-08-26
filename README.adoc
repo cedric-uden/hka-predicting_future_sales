@@ -14,6 +14,10 @@ Planing is done on a miro board: https://miro.com/app/board/o9J_lNamDng=/
 
 === Issues on Apple Silicon (M1)
 
++++ <details><summary> +++
+Expand to view patches applied on an Apple Silicon machine.
++++ </summary><div> +++
+
 Some issues were encountered after setting up the conda environment
 with poetry. Following fixes were applied
 
@@ -40,3 +44,4 @@ conda install -c conda-forge py-xgboost
 ----
 brew install xgboost
 ----
++++ <br></div></details> +++
