@@ -2,6 +2,9 @@
 // enables syntax highlighting:
 :source-highlighter: rouge
 
+// Variables
+:miro_link: https://miro.com/app/board/o9J_lNamDng=/
+
 = Predicting Future Sales
 
 == 📈 Introduction
@@ -10,7 +13,7 @@ Repo for my 5th semester research project
 
 == 📝 Planing
 
-Planing is done on a miro board: https://miro.com/app/board/o9J_lNamDng=/
+Planing is done on a miro board: {miro_link}
 
 
 == 🛠 Troubleshooting
