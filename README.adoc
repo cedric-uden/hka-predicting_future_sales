@@ -4,6 +4,7 @@
 
 // Variables
 :miro_link: https://miro.com/app/board/o9J_lNamDng=/
+:conda_env_name: rp
 
 = Predicting Future Sales
 
@@ -30,9 +31,9 @@ with poetry. Following fixes were applied
 
 First, check that the right conda environment is active
 
-[source,sh]
+[source,sh,subs="+attributes"]
 ----
-conda activate rp
+conda activate {conda_env_name}
 ----
 
 ==== Issues with `XGBoost`
