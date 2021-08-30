@@ -1,3 +1,7 @@
+// ADOC Settings
+// enables syntax highlighting:
+:source-highlighter: rouge
+
 = Predicting Future Sales
 
 == 📈 Introduction
