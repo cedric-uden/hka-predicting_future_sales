@@ -5,7 +5,7 @@ description = "Research Project"
 authors = ["Cédric Uden <cedric@uden.de>"]
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.9"
 jupyter = "^1.0.0"
 pandas = "^1.2.3"
 sklearn = "^0.0"
