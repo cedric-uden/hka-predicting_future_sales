@@ -9,5 +9,43 @@ def time_runtime(fun):
     start = time.time()
     val = fun()
     end = time.time()
-    print(f"Runtime: {end - start}")
+    runtime = end - start
+    print_runtime = choose_parser(runtime)
+    print(f"Runtime: {print_runtime}")
     return val
+
+
+def choose_parser(runtime):
+    """
+    Parse the runtime according to the corresponding scope.
+    """
+    if runtime < 1:
+        return parse_milliseconds(runtime)
+    elif runtime < 60:
+        return parse_seconds(runtime)
+    else:
+        return parse_minutes(runtime)
+
+
+def parse_milliseconds(runtime):
+    """
+    Transform the runtime if the runtime is measured under a second.
+    """
+    return f"{int(runtime * 1000)}ms"
+
+
+def parse_seconds(runtime):
+    """
+    Transform the runtime if the timing is under a minute.
+    """
+    return f"{int(runtime)}s"
+
+
+def parse_minutes(runtime):
+    """
+    Transform the runtime if the timing exceeds a minute.
+    """
+    runtime = int(runtime)
+    minutes = runtime / 60
+    seconds = runtime % 60
+    return f"{minutes}min &  {seconds}s"
