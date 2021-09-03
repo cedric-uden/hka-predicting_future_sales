@@ -1,13 +1,13 @@
 import time
 
 
-def time_runtime(fun):
+def time_runtime(fun, *args, **kwargs):
     """
     Pass a function to and print the execution time of the function.
     Return the return value of the originally called function at the end.
     """
     start = time.time()
-    val = fun()
+    val = fun(*args, **kwargs)
     end = time.time()
     runtime = end - start
     print_runtime = choose_parser(runtime)
