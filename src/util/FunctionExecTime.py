@@ -19,12 +19,21 @@ def choose_parser(runtime):
     """
     Parse the runtime according to the corresponding scope.
     """
-    if runtime < 1:
+    if runtime < 0.001:
+        return parse_nanoseconds(runtime)
+    elif runtime < 1:
         return parse_milliseconds(runtime)
     elif runtime < 60:
         return parse_seconds(runtime)
     else:
         return parse_minutes(runtime)
+
+
+def parse_nanoseconds(runtime):
+    """
+    Transform the runtime if the runtime is measured under a millisecond.
+    """
+    return f"{int(runtime * 1_000_000)}ns"
 
 
 def parse_milliseconds(runtime):
@@ -46,6 +55,6 @@ def parse_minutes(runtime):
     Transform the runtime if the timing exceeds a minute.
     """
     runtime = int(runtime)
-    minutes = runtime / 60
+    minutes = int(runtime / 60)
     seconds = runtime % 60
-    return f"{minutes}min &  {seconds}s"
+    return f"{minutes}min & {seconds}s"
