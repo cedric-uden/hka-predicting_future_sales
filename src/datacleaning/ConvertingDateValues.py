@@ -1,4 +1,3 @@
-import pandas as pd
 
 
 def date_to_month(df):
