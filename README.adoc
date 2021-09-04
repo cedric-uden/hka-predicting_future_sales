@@ -75,3 +75,30 @@ conda install -c conda-forge py-xgboost
 brew install xgboost
 ```
 +++ <br></div></details> +++
+
+=== Issues on Ubuntu
+
++++ <details><summary> +++
+Expand to view patches applied on an Ubuntu machine.
++++ </summary><div> +++
+
+First, check that the right conda environment is active
+
+[subs="+attributes"]
+```
+conda activate {conda_env_name}
+```
+
+==== Issues with connecting to the debugger using PyCharm (Professional) IDE
+
+Had issues to get the debugger to run using PyCharm. Not entirely sure which exact package is missing.
+Rerunning following command did alleviate the issue. Still encountered some very strange bugs along the way
+after coming back from coding in a Mac environment after a prolonged period of time.
+```sh
+conda install jupyter
+```
+
+Additionally, I did reset all the settings / caches on an IDE and project level. IDE directories are mentioned https://intellij-support.jetbrains.com/hc/en-us/articles/206544519-Directories-used-by-the-IDE-to-store-settings-caches-plugins-and-logs[here],
+the project level configs are found in the `.idea/` folder in the project root.
+
++++ <br></div></details> +++
