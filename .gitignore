@@ -156,9 +156,11 @@ dmypy.json
 *.bcf
 main.pdf
 
-# kaggle data
-data/*.csv
-data/*/*.csv
+# datasets
+data/info/*.csv
+data/technical/*.csv
+data/*/*.ods
+data/*/*.xlsm
 
 # intellij data
 *.idea/
