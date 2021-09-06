@@ -1,4 +1,4 @@
-Store all additional dataset which give insight on the given data.
+Store all additional dataset which give insight on the given data.  
 These are all downloaded from the Kaggle competition.
 
 Expecting following files:
