@@ -1,4 +1,4 @@
-shop_id,city,city_in_english,zip_code,population,population_growth,region,wiki,additional_links
+shop_ids,city,city_in_english,zip_code,population,population_growth,region,wiki,additional_links
 0;1;57;58,Якутск,Yakutsk,677000,311760,1.5,Sakha,https://en.wikipedia.org/wiki/Yakutsk,https://www.macrotrends.net/cities/22395/yakutsk/population
 2,Адыгея,Adygea,385000,453376,3,North Caucasus,https://en.wikipedia.org/wiki/Adygea,
 3,Балашиха,Balashikha,143000,215494,117.3,Moscow Oblast,https://en.wikipedia.org/wiki/Balashikha,
