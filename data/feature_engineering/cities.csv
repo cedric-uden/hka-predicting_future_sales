@@ -1,0 +1,29 @@
+city,city_in_english,zip_code,population,population_growth,region,wiki,additional_links
+Якутск,Yakutsk,677000,311760,1.5,Sakha,https://en.wikipedia.org/wiki/Yakutsk,https://www.macrotrends.net/cities/22395/yakutsk/population
+Адыгея,Adygea,385000,453376,3,North Caucasus,https://en.wikipedia.org/wiki/Adygea,
+Балашиха,Balashikha,143000,215494,117.3,Moscow Oblast,https://en.wikipedia.org/wiki/Balashikha,
+Волжский,"Volzhsky, Volgograd Oblast",404100,325224,3.5,Volgograd Oblast,"https://en.wikipedia.org/wiki/Volzhsky,_Volgograd_Oblast",
+Вологда,Vologda,160000,312420,3.5,Vologda Oblast,https://en.wikipedia.org/wiki/Vologda,
+Воронеж,Voronezh,394000,1047549,0.5,Voronezh Oblast,https://en.wikipedia.org/wiki/Voronezh,https://www.macrotrends.net/cities/22393/voronezh/population
+Жуковский,Zhukovsky,140180,108187,3.3,Moscow Oblast,"https://en.wikipedia.org/wiki/Zhukovsky,_Moscow_Oblast",
+Казань,Kazan,420000,1243500,8.7,Tatarstan,https://en.wikipedia.org/wiki/Kazan,
+Калуга,Kaluga,248000,340851,5,Kaluga Oblast,https://en.wikipedia.org/wiki/Kaluga,
+Коломна,Kolomna,140400,142691,-1.3,Moscow Oblast,https://en.wikipedia.org/wiki/Kolomna,
+Красноярск,Krasnoyarsk,660000,1090811,12,Krasnoyarsk Krai,https://en.wikipedia.org/wiki/Krasnoyarsk,
+Курск,Kursk,305000,448733,8.1,Kursk Oblast,https://en.wikipedia.org/wiki/Kursk,
+Москва,Moscow,115000,12506468,0.5,Central,https://en.wikipedia.org/wiki/Moscow,https://www.macrotrends.net/cities/22299/moscow/population
+Мытищи,Mytishchi,141000,211606,22.2,Moscow Oblast,https://en.wikipedia.org/wiki/Mytishchi,
+Н.Новгород,Nizhny Novgorod,603000,1259013,0.7,Nizhny Novgorod Oblast,https://en.wikipedia.org/wiki/Nizhny_Novgorod,
+Новосибирск,Novosibirsk,630000,1612833,9.4,Novosibirsk Oblast,https://en.wikipedia.org/wiki/Novosibirsk,
+Омск,Omsk,644000,1172070,1.6,Omsk Oblast,https://en.wikipedia.org/wiki/Omsk,
+РостовНаДону,Rostov-on-Don,344000,1130305,3.8,Rostov Oblast,https://en.wikipedia.org/wiki/Rostov-on-Don,
+СПб,Saint Petersburg,190000,5351935,0.8,Leningrad Oblast,https://en.wikipedia.org/wiki/Saint_Petersburg,https://www.macrotrends.net/cities/22365/saint-petersburg/population
+Самара,Samara,443000,1163399,-0.1,Samara Oblast,https://en.wikipedia.org/wiki/Samara,
+Сергиев,Sergiyev Posad,141000,103444,-7,Moscow Oblast,https://en.wikipedia.org/wiki/Sergiyev_Posad,
+Сургут,Surgut,628400,450000,2,Khanty-Mansi Autonomous Okrug,https://en.wikipedia.org/wiki/Surgut,https://www.macrotrends.net/cities/22369/surgut/population
+Томск,Tomsk,634000,574002,9.4,Tomsk Oblast,https://en.wikipedia.org/wiki/Tomsk,
+Тюмень,Tyumen,625000,768358,32,Tyumen Oblast,https://en.wikipedia.org/wiki/Tyumen,
+Уфа,Ufa,450000,1120547,5.5,Bashkortostan,https://en.wikipedia.org/wiki/Ufa,
+Химки,Khimki,141400,250688,20.9,Moscow Oblast,https://en.wikipedia.org/wiki/Khimki,
+Чехов,Chekhov,142300,60720,0,Moscow Oblast,"https://en.wikipedia.org/wiki/Chekhov,_Moscow_Oblast",https://www.macrotrends.net/countries/RUS/russia/population-growth-rate
+Ярославль,Yaroslavl,150000,608722,2.9,Yaroslavl Oblast,https://en.wikipedia.org/wiki/Yaroslavl,
