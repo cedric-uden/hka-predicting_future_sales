@@ -11,7 +11,7 @@ def time_runtime(fun, *args, **kwargs):
     end = time.time()
     runtime = end - start
     print_runtime = choose_parser(runtime)
-    print(f"Runtime: {print_runtime}")
+    print(f"Runtime of function \"{fun.__name__}\": {print_runtime}")
     return val
 
 
