@@ -1,0 +1,85 @@
+item_category_name,item_category_id,english_name,category_type,fancy,category_device,category_device_for_platform,category_device_for_platform_manufacturer,type
+PC - Гарнитуры/Наушники,0,PC - Headsets / Headphones,hardware,0,pc,pc,pc,physical
+Аксессуары - PS2,1,Accessories - PS2,accessories,0,ps2,ps,sony,physical
+Аксессуары - PS3,2,Accessories – PS3,accessories,0,ps3,ps,sony,physical
+Аксессуары - PS4,3,Accessories – PS4,accessories,0,ps4,ps,sony,physical
+Аксессуары - PSP,4,Accessories – PSP,accessories,0,psp,ps,sony,physical
+Аксессуары - PSVita,5,Accessories – PSVita,accessories,0,psvita,ps,sony,physical
+Аксессуары - XBOX 360,6,Accessories – XBOX 360,accessories,0,xbox360,xbox,microsoft,physical
+Аксессуары - XBOX ONE,7,Accessories – XBOX ONE,accessories,0,xbox1,xbox,microsoft,physical
+Билеты (Цифра),8,Tickets (Number),service,0,service,service,service,digital
+Доставка товара,9,Delivery of goods,service,0,service,service,inhouse,service
+Игровые консоли - PS2,10,Game consoles - PS2,game consoles,0,ps2,ps,sony,physical
+Игровые консоли - PS3,11,Game consoles - PS3,game consoles,0,ps3,ps,sony,physical
+Игровые консоли - PS4,12,Game consoles - PS4,game consoles,0,ps4,ps,sony,physical
+Игровые консоли - PSP,13,Game consoles - PSP,game consoles,0,psp,ps,sony,physical
+Игровые консоли - PSVita,14,Game consoles - PSVita,game consoles,0,psvita,ps,sony,physical
+Игровые консоли - XBOX 360,15,Game consoles – XBOX 360,game consoles,0,xbox360,xbox,microsoft,physical
+Игровые консоли - XBOX ONE,16,Game consoles – XBOX ONE,game consoles,0,xbox1,xbox,microsoft,physical
+Игровые консоли - Прочие,17,Game consoles - Other,game consoles,0,generic,generic,generic,physical
+Игры - PS2,18,Games - PS2,games,0,ps2,ps,sony,physical
+Игры - PS3,19,Games - PS3,games,0,ps3,ps,sony,physical
+Игры - PS4,20,Games - PS4,games,0,ps4,ps,sony,physical
+Игры - PSP,21,Games - PSP,games,0,psp,ps,sony,physical
+Игры - PSVita,22,Games - PSVita,games,0,psvita,ps,sony,physical
+Игры - XBOX 360,23,Games - XBOX 360,games,0,xbox360,xbox,microsoft,physical
+Игры - XBOX ONE,24,Games - XBOX ONE,games,0,xbox1,xbox,microsoft,physical
+Игры - Аксессуары для игр,25,Games - Game Accessories,accessories,0,games,games,games,physical
+Игры Android - Цифра,26,Android Games - Number,games,0,android,android,google,digital
+Игры MAC - Цифра,27,MAC Games - Number,games,0,mac,mac,apple,digital
+Игры PC - Дополнительные издания,28,PC Games - Additional Editions,games,1,pc,pc,pc,physical
+Игры PC - Коллекционные издания,29,PC Games - Collector's Editions,games,1,pc,pc,pc,physical
+Игры PC - Стандартные издания,30,PC Games - Standard Editions,games,0,pc,pc,pc,physical
+Игры PC - Цифра,31,PC Games - Number,games,0,pc,pc,pc,digital
+"Карты оплаты (Кино, Музыка, Игры)",32,"Payment cards (Cinema, Music, Games)",payment cards,0,media,media,media,physical
+Карты оплаты - Live!,33,Payment cards - Live!,payment cards,0,console,xbox,microsoft,physical
+Карты оплаты - Live! (Цифра),34,Payment cards - Live! (Number),payment cards,0,console,xbox,microsoft,digital
+Карты оплаты - PSN,35,Payment cards - PSN,payment cards,0,console,ps,sony,physical
+Карты оплаты - Windows (Цифра),36,Payment Cards - Windows (Digital),payment cards,0,console,pc,microsoft,digital
+Кино - Blu-Ray,37,Cinema - Blu-Ray,movies,0,bluray,movies,movies,physical
+Кино - Blu-Ray 3D,38,Cinema - Blu-Ray 3D,movies,0,bluray,movies,movies,physical
+Кино - Blu-Ray 4K,39,Cinema - Blu-Ray 4k,movies,0,bluray,movies,movies,physical
+Кино - DVD,40,Cinema – DVD,movies,0,dvd,movies,movies,physical
+Кино - Коллекционное,41,Cinema - Collector's,movies,1,dvd,movies,movies,physical
+"Книги - Артбуки, энциклопедии",42,"Books - Artbooks, encyclopedias",books,0,artbooks,books,books,physical
+Книги - Аудиокниги,43,Books - Audiobooks,books,0,audiobooks,digital,books,physical
+Книги - Аудиокниги (Цифра),44,Books - Audiobooks (Digital),books,0,audiobooks,digital,books,digital
+Книги - Аудиокниги 1С,45,Books - Audiobooks 1C,books,0,audiobooks,digital,inhouse,physical
+Книги - Бизнес литература,46,Books - Business Literature,books,0,business,books,books,physical
+"Книги - Комиксы, манга",47,"Books - Comics, manga",books,0,leisure,books,books,physical
+Книги - Компьютерная литература,48,Books - Computer Literature,books,0,computer,books,books,physical
+Книги - Методические материалы 1С,49,Books - Methodical materials 1C,books,0,learning,books,inhouse,physical
+Книги - Открытки,50,Books - Postcards,books,0,leisure,for others,books,physical
+Книги - Познавательная литература,51,Books - Educational literature,books,0,learning,books,books,physical
+Книги - Путеводители,52,Books - Guides,books,0,learning,books,books,physical
+Книги - Художественная литература,53,Books - Fiction,books,0,leisure,books,books,physical
+Книги - Цифра,54,Books - Number,books,0,books,books,books,digital
+Музыка - CD локального производства,55,Music - locally produced CD,music,0,cd,cd,music,physical
+Музыка - CD фирменного производства,56,Music - branded CD,music,0,cd,cd,music,physical
+Музыка - MP3,57,Music - MP3,music,0,mp3,digital,music,digital
+Музыка - Винил,58,Music - Vinyl,music,0,vinyl,vinyl,music,physical
+Музыка - Музыкальное видео,59,Music - Music video,music,0,cd,digital,music,physical
+Музыка - Подарочные издания,60,Music - Gift Editions,music,0,cd,for others,music,physical
+Подарки - Атрибутика,61,Gifts - Attributes,gifts,0,attributes,for others,gifts,physical
+"Подарки - Гаджеты, роботы, спорт",62,"Gifts - Gadgets, Robots, Sports",gifts,0,gadgets,for others,gifts,physical
+Подарки - Мягкие игрушки,63,Gifts - Stuffed Toys,gifts,0,toys,for others,gifts,physical
+Подарки - Настольные игры,64,Gifts - Board Games,gifts,0,board games,for others,gifts,physical
+Подарки - Настольные игры (компактные),65,Gifts - Board Games (Compact),gifts,0,board games,for others,gifts,physical
+"Подарки - Открытки, наклейки",66,"Gifts - Postcards, stickers",gifts,0,postcards,for others,gifts,physical
+Подарки - Развитие,67,Gifts - Development,gifts,0,dev,for others,gifts,physical
+"Подарки - Сертификаты, услуги",68,"Gifts - Certificates, services",gifts,0,certificates,for others,gifts,physical
+Подарки - Сувениры,69,Gifts - Souvenirs,gifts,0,souvenirs,for others,gifts,physical
+Подарки - Сувениры (в навеску),70,Gifts - Souvenirs (hinged),gifts,0,souvenirs,for others,gifts,physical
+"Подарки - Сумки, Альбомы, Коврики д/мыши",71,"Gifts - Bags, Albums, Mousepads",gifts,0,bags,for others,gifts,physical
+Подарки - Фигурки,72,Gifts - Figures,gifts,0,figures,for others,gifts,physical
+Программы - 1С:Предприятие 8,73,Programs - 1C: Enterprise 8,software,0,business,pc,pc,physical
+Программы - MAC (Цифра),74,Programs - MAC (Digit),software,0,mac,mac,apple,digital
+Программы - Для дома и офиса,75,Programs - For Home and Office,software,0,pc,pc,pc,physical
+Программы - Для дома и офиса (Цифра),76,Programs - For Home and Office (Digital),software,0,pc,pc,pc,digital
+Программы - Обучающие,77,Programs - Educational,software,0,learning,pc,pc,physical
+Программы - Обучающие (Цифра),78,Programs - Educational (Digital),software,0,learning,pc,pc,digital
+Служебные,79,Service,service,0,service,service,service,physical
+Служебные - Билеты,80,Service - Tickets,service,0,service digital,service,service,digital
+Чистые носители (шпиль),81,Blank media (spire),blanks,0,hardware bulk,hardware,hardware,physical
+Чистые носители (штучные),82,Blank media (piece),blanks,0,hardware single,hardware,hardware,physical
+Элементы питания,83,Batteries,power,0,hardware power,hardware,hardware,physical
