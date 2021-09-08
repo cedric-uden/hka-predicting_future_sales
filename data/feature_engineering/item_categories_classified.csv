@@ -1,4 +1,4 @@
-item_category_name,item_category_id,english_name,category_type,fancy,category_device,category_device_for_platform,category_device_for_platform_manufacturer,type
+item_category_name,item_category_id,english_name,category_type,category_is_fancy,category_device,category_device_for_platform,category_device_for_platform_manufacturer,category_medium_type
 PC - Гарнитуры/Наушники,0,PC - Headsets / Headphones,hardware,0,pc,pc,pc,physical
 Аксессуары - PS2,1,Accessories - PS2,accessories,0,ps2,ps,sony,physical
 Аксессуары - PS3,2,Accessories – PS3,accessories,0,ps3,ps,sony,physical
