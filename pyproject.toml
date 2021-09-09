@@ -19,6 +19,7 @@ CurrencyConverter = "^0.16.4"
 pytest = "^6.2.4"
 numpy = "1.19.0"
 pmdarima = "^1.8.2"
+xgboost = "1.3.3"
 
 [tool.poetry.dev-dependencies]
 
