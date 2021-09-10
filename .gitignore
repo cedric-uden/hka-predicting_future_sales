@@ -161,6 +161,8 @@ data/info/*.csv
 data/technical/*.csv
 data/*/*.ods
 data/*/*.xlsm
+data/arima/inspect_this_item.csv
+data/arima/train_cleaned.csv
 
 # intellij data
 *.idea/
