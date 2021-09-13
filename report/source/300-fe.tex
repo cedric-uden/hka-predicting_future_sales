@@ -17,11 +17,15 @@ $$
 
 This operation was implemented using the Python function \texttt{product} from the \texttt{itertools} package from the Python standard library.\footnote{\href{https://docs.python.org/3/library/itertools.html\#itertools.product}{\texttt{itertools} - official documentation}}
 
-\noindent \textit{N.B. that this ignores the months which have neither sold anything in a given month.}
+\noindent \textit{N.B. that this ignores the months which have not sold anything in the considered time period.}
 
 \subsection{Shop information}
 
-Foo
+To add detailed information about the shops, we first identified the city in which a shop is located. To continue from there, we researched geographic and demographic data. This information was added to a spreadsheet and exported as \acrfull{csv} file in a similar manner to the original dataset. The following features have been added: \texttt{zip\_code}, \texttt{region}, \texttt{population}, \texttt{population\_growth} and \texttt{region\_gdp}.
+
+The population growth was considered on a city level from a time frame roughly between 2010--2018. (varying according to different sources from discovered materials)
+
+The population and gdp (per capita) information was primarily taken from the year 2018. Again, this was due to the abundance of information publicly available for this period.
 
 \subsection{Category information}
 
