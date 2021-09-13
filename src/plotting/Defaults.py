@@ -12,3 +12,5 @@ def set_defaults():
     plt.rcParams['lines.marker'] = 'o'
     plt.rcParams['lines.markersize'] = 4
     plt.rcParams['lines.markerfacecolor'] = 'red'
+    plt.rcParams['figure.figsize'] = (30,10)
+    plt.rcParams['legend.fontsize'] = 16
