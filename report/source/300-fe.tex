@@ -56,9 +56,12 @@ In the next step, we have created a set of lag features. The adjoining figure il
 The function receives following parameters: main DataFrame (containing all the features), the intervals to be lagged and the features which are lagged. Then, the individual lags are iterated: begin by storing the relevant columns from the DataFrame, add a new column, shift the date one forward and merge the newly created feature back onto the main DataFrame. (\textit{the \texttt{cl} function simply concatenates elements of lists together})
 
 
-\subsection{Average prices}
+\subsection{Price related features}
 
-Foo
+Primarily to avoid throwing the new items in the test set in cold water, a variety of average prices has been calculated. This includes the average price of a given item over all, as well as the average price from an item in a given shop and the average price of items in a given category.
+This is intended to nudge the model in a certain direction.
+
+On top of that, a trend feature has been added. This is effectively a lag of the item price. This indicates the trending item price in order to account for the trend observed in figure \ref{fig:total_sales} and figure \ref{fig:total_revenue} which implies fewer sales with a rising revenue over time.
 
 \subsection{Additional features}
 
