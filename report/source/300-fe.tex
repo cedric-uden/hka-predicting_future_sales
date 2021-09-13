@@ -29,7 +29,14 @@ The population and gdp (per capita) information was primarily taken from the yea
 
 \subsection{Category information}
 
-Foo
+The process of arranging detailed features for the various categories was definitely more arbitrary compared to the shop information. After translating all 84 categories, some were very specific and hereby intuitive, for instance the category 12 \enquote{Game consoles - PS4}. This could easily be split into a type (\enquote{game console}), a dedicated device (\enquote{ps4}), platform (\enquote{playstation}), manufacturer (\enquote{sony}) and a medium (\enquote{physical}).
+
+The same distinctions were harder to make for other categories like \enquote{Gifts - Stuffed Toys} or \enquote{Service}. These could be interpreted very differently, we attempted to create meaningful splits to our best intentions. This resulted the following new features:
+\vspace*{-2mm}
+\begin{center}
+\texttt{category\_type}, \ \texttt{category\_device}, \ \texttt{category\_device\_for\_platform}, \ \texttt{category\_device\_for\_platform\_manufacturer}, \ \texttt{category\_medium\_type}, \ \texttt{category\_is\_fancy}
+\end{center}
+The last feature, \texttt{category\_is\_fancy}, evolved from the distinction in certain existing categories like \enquote{PC Games - Standard Editions} and \enquote{PC Games - Collector's Editions} which expects the latter to have a narrower target audience for a same title.
 
 \subsection{Lag features}
 
