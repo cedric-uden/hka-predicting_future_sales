@@ -83,3 +83,11 @@ Now, when inspecting the distribution of sales within a given item category, the
 The three most prominent item categories, are namely: PC Games, Movies \& Music. With the importance of the entertainment industry, these results are foreseeable.
 
 In contrast to the best selling items, we have inspected the categories which appear to be non-existant at first glance. After making sure that no category is missing any records, the worst selling item categories are simply explained after finding out what they are all about: a mix of niche and novelty items as well as books. The lowest selling categories with less than 10 sales each are: accessories for a long outdated gaming console, games for the Apple Mac OS platform and a various categories of books.
+
+\subsection{Understanding the test data}
+
+The test data contains a total of $214'200$ entries to be predicted. Considering the total amount of records in the train data, the relation between $13.7$ train records per test record does not appear to be very significant anymore. This surprising low number highlights the importance of a thorough feature engineering in order to create a robust model.
+
+Before that, we are taking a look at how the test data came about. After isolating the \texttt{shop\_id} and \texttt{item\_id} duplicates, the number $214'200$ is quickly demystified: there are $5100$ unique items and $42$ unique shops. This factors up neatly to $214'200$, which in conclusion, tells us that there are exactly $5100$ items in each and every (present) shop to be predicted.
+
+Finally, the \href{https://www.kaggle.com/c/competitive-data-science-predict-future-sales/data}{description of the Kaggle competition} hints at us to inspect if there are any new items in the test data, which are at no point in time present in the train data. Indeed, after subtracting two sets of the total items from both datasets, we can identify that there are $363$ new items, hence a total of $363*42=15'246$ entries that have never been seen by the trained model.
