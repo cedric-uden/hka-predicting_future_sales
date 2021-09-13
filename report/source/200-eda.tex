@@ -24,3 +24,20 @@ To compare and validate the above statements, we plotted the total revenue of th
 \end{figure}
 
 The seasonality of the data is clearly confirmed. Meanwhile, the downwards trend does not appear to be of particular relevance. The revenue stream has a constant trend over the years while having fewer sales. We should hereby be aware of the trend of having fewer sales with more expensive items.
+
+To finish off the brief overview, we are taking a look at the correlation between the features and the label.
+
+\begin{wrapfigure}{l}{0.6\textwidth}
+\centering
+  \includegraphics[width=0.9\linewidth]{external_content/graphs/corr_matrix.png}
+\captionsetup{justification=centering}
+\caption{Correlation matrix}
+\label{corr_matrix}
+\end{wrapfigure}
+
+\noindent As we can observe, the label \texttt{item\_cnt\_day} has no strong correlation between any of the given features. 
+This most likely leads to difficult to predict models, as no clear characteristics of the label is found in relation to the various features.
+
+Additionally, no high correlation between features is observed. Therefore, we are not checking any features for multicollinearity at this point. \cite{MultivariateStatistics}
+
+\clearpage
