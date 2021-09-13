@@ -53,7 +53,7 @@ In the next step, we have created a set of lag features. The adjoining figure il
 
 \lstinputlisting[language=python, caption=Compute Lag Features]{external_content/code/lag_features.py}
 
-The function receives following parameters: main DataFrame (containing all the features), the intervals to be lagged and the features which are lagged. Then, the individual lags are iterated: begin by storing the relevant columns from the DataFrame, add a new column, shift the date one forward and merge the newly created feature back onto the main DataFrame. (\textit{the \texttt{cl} function simply concatenates elements of lists together})
+The function receives following parameters: main \gls{df} (containing all the features), the intervals to be lagged and the features which are lagged. Then, the individual lags are iterated: begin by storing the relevant columns from the \gls{df}, add a new column, shift the date one forward and merge the newly created feature back onto the main \gls{df}. (\textit{the \texttt{cl} function simply concatenates elements of lists together})
 
 
 \subsection{Price related features}
@@ -68,4 +68,4 @@ On top of that, a trend feature has been added. This is effectively a lag of the
 To finish off the feature engineering, a few selected features have been crafted representing additional information from the time data. A few are really simple features, such as the month of the year. This is intended to take the seasonality into account. And a feature which holds the amount of days in a month, this intents to explain the difference in sales when having a month with 31 days or 28 days, thus having roughly 10\% more days where the shops are opened.
 
 Another set of features, which has been a little bit trickier to implement, is the record of when an item has been initially and most recently sold on a company wide and on a given shop basis.
-To achieve this, we created a set for each feature respectively, and stored a key pair \texttt{(item\_id, shop\_id)}with the resulting dates. Finally, the set has been matched to the corresponding rows in the DataFrame.
+To achieve this, we created a set for each feature respectively, and stored a key pair \texttt{(item\_id, shop\_id)}with the resulting dates. Finally, the set has been matched to the corresponding rows in the \gls{df}.
