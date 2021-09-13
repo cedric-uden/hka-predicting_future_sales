@@ -40,7 +40,21 @@ The last feature, \texttt{category\_is\_fancy}, evolved from the distinction in 
 
 \subsection{Lag features}
 
-Foo
+\begin{wrapfigure}[8]{l}{0.48\textwidth}
+\centering
+\input{source/340-lag_feature.tex}
+\captionsetup{justification=centering}
+\caption{Creating lag features}
+\label{lag}
+\end{wrapfigure}
+
+
+In the next step, we have created a set of lag features. The adjoining figure illustrates the procedure how to create them. The idea is that, every label $y_t$ in function of its time $t$, is dependent of its preceeding value $y_{t-n}$ in a time series. $n$ is choosen to suit the time interval of the problem, for instance $n \cap \{1;2;3;6;12\}$ to consider the past two months, trimester, semester and year in a monthly spaced time series. Consequently, the lag$\_n$ series shifts the label for $n$ intervals forward in time. To accomplish this feature for several different existing features, the following function has been implemented:
+
+\lstinputlisting[language=python, caption=Compute Lag Features]{external_content/code/lag_features.py}
+
+The function receives following parameters: main DataFrame (containing all the features), the intervals to be lagged and the features which are lagged. Then, the individual lags are iterated: begin by storing the relevant columns from the DataFrame, add a new column, shift the date one forward and merge the newly created feature back onto the main DataFrame. (\textit{the \texttt{cl} function simply concatenates elements of lists together})
+
 
 \subsection{Average prices}
 
