@@ -1,12 +1,40 @@
-\subsection{Hello World}
-\subsubsection{Hello World}
+\subsection{Create zero sales}
 
+The training dataset tells us exactly which item got sold when and where. At the same time, this tells us exactly which shop did not sell any given item on a given date.
+With this information, we can craft the possibly most important feature of them all: add the records from a possible combination of a given month, all shops and all items and fill the sale record with 0. This operation was dubbed \enquote{create zero sales}.
+The mathematical function of this operation can be expressed with the following cartesian product:
 
-\begin{lstlisting}[inputencoding={utf8}, extendedchars=false, escapeinside='', language=bash, caption=Hello World]
-echo "Hello World"
-\end{lstlisting}
+\vspace*{-4mm}
+$$
+\{\text{\texttt{date\_block\_num}}_i\}
+\quad \times \quad
+\{{\text{\texttt{shop\_id}}}\}
+\quad  \times \quad 
+\{{\text{\texttt{item\_id}}}\}
+\quad \mid \quad
+i \cap [0; 33]
+$$
 
-\lstinputlisting[language=python, caption=Sample Import]{external_content/code/python_sample.py}
+This operation was implemented using the Python function \texttt{product} from the \texttt{itertools} package from the Python standard library.\footnote{\href{https://docs.python.org/3/library/itertools.html\#itertools.product}{\texttt{itertools} - official documentation}}
 
+\noindent \textit{N.B. that this ignores the months which have neither sold anything in a given month.}
 
-\clearpage
+\subsection{Shop information}
+
+Foo
+
+\subsection{Category information}
+
+Foo
+
+\subsection{Lag features}
+
+Foo
+
+\subsection{Average prices}
+
+Foo
+
+\subsection{Additional features}
+
+Foo
