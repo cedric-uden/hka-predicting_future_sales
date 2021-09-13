@@ -52,7 +52,34 @@ In this section, we are going to examine potential outliers in the training data
   \label{fig:item_price_outliers}
 \end{figure}
 
-We can identify all but one heavy outlier from the above plot. After inspecting the outlier, we can be sure that the record is not faulty: the item in question, item nr. 6066, is a single record of a software license for 522 people. \footnote{\href{https://translate.google.com/?sl=ru&tl=en&text=Radmin\%203\%20\%20-\%20522\%20\%D0\%BB\%D0\%B8\%D1\%86.&op=translate }{Translation} - \href{https://www.radmin.com/ordering/}{Software}}
+We can identify all but one heavy outlier from the above plot. After inspecting the outlier, we can be sure that the record is not faulty: the item in question, item nr. 6066, is a single record of a software license for 522 people.\footnote{\href{https://translate.google.com/?sl=ru&tl=en&text=Radmin\%203\%20\%20-\%20522\%20\%D0\%BB\%D0\%B8\%D1\%86.&op=translate }{Translation} - \href{https://www.radmin.com/ordering/}{Software}}
 
 Fortunately, upon further examination, we were able to verify that the item in question is not present in the testing data and therefore not relevant for the problem.
 
+\subsection{Distribution of sales among shops and across item categories}
+
+We are now going to examine the distribution of the total sales in regards to the different shops as well as the different item categories. The goal is again to detect potential outliers and to get an understanding of how the sales record came about.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.82\linewidth]{external_content/graphs/distribution_amongst_shops.png}
+  \captionsetup{justification=centering}
+  \captionof{figure}{Distribution of total item sales across the different shops}
+  \label{fig:distribution_amongst_shops}
+\end{figure}
+
+The shops in the center of the above graph appear to be very prominent. This makes sense when we take into consideration, that the shops with ID's 20--32 are all located in Moscow, the capital of the country.
+The next prominent shop in the graph, shop nr. 55, is again easily understood after finding out that this is the digital shop of the company. The digital shop is common to all stores across the country which explains its high sales count.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.98\linewidth]{external_content/graphs/distribution_across_item_categories.png}
+  \captionsetup{justification=centering}
+  \captionof{figure}{Distribution of total item sales within each item category}
+  \label{fig:distribution_amongst_item_categories}
+\end{figure}
+
+Now, when inspecting the distribution of sales within a given item category, the space division is pretty uneven. When diving into the details, we can again relatively easily make sense as of why this came across.
+The three most prominent item categories, are namely: PC Games, Movies \& Music. With the importance of the entertainment industry, these results are foreseeable.
+
+In contrast to the best selling items, we have inspected the categories which appear to be non-existant at first glance. After making sure that no category is missing any records, the worst selling item categories are simply explained after finding out what they are all about: a mix of niche and novelty items as well as books. The lowest selling categories with less than 10 sales each are: accessories for a long outdated gaming console, games for the Apple Mac OS platform and a various categories of books.
