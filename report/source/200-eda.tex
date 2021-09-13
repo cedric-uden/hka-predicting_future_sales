@@ -40,4 +40,19 @@ This most likely leads to difficult to predict models, as no clear characteristi
 
 Additionally, no high correlation between features is observed. Therefore, we are not checking any features for multicollinearity at this point. \cite{MultivariateStatistics}
 
-\clearpage
+\subsection{Inspect outliers}
+
+In this section, we are going to examine potential outliers in the training data and observe their distribution. As the \href{https://www.kaggle.com/c/competitive-data-science-predict-future-sales/overview/evaluation}{competition guidelines} suggest to clip the true target values to 20, we can savely ignore the outliers from the label as these will be clipped regardless.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.9\linewidth]{external_content/graphs/outliers-item_price.png}
+  \captionsetup{justification=centering}
+  \captionof{figure}{Outliers of the feature \texttt{item\_price}}
+  \label{fig:item_price_outliers}
+\end{figure}
+
+We can identify all but one heavy outlier from the above plot. After inspecting the outlier, we can be sure that the record is not faulty: the item in question, item nr. 6066, is a single record of a software license for 522 people. \footnote{\href{https://translate.google.com/?sl=ru&tl=en&text=Radmin\%203\%20\%20-\%20522\%20\%D0\%BB\%D0\%B8\%D1\%86.&op=translate }{Translation} - \href{https://www.radmin.com/ordering/}{Software}}
+
+Fortunately, upon further examination, we were able to verify that the item in question is not present in the testing data and therefore not relevant for the problem.
+
