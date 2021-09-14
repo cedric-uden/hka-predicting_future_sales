@@ -1,0 +1,9 @@
+Unfortunately, the following steps we intended to undergo were dropped due to time concerns.
+
+These included more simple steps, like extending the zero sales from its current state, which only matches item and shop combinations on a given month, to the entire timespan.
+This would increase the rows of the current dataset of approximately 11 million rows, to a whooping $33 \times 60 \times 21'807 = 43'177'860$ rows.
+
+Next, we wanted to take a closer look at the final features and potentially drop features that are having a negative impact on the models performance. For this, we would have to reevaluate the correlations between features for potentially multicollinear values. Additionally, verifying the impact of individual features would have been beneficial.
+
+We were also aiming for a more throughout evaluation of different modelling techniques such as decision trees or \acrshort{lstm}, or applying different frameworks such as \texttt{xgboost} or \texttt{\acrshort{lgbm}}.
+These predictions could have been merged using ensemble learning in order to increase the performance even further. Sadly, this will have to be postponed the time being.
