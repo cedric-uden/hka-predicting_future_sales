@@ -167,6 +167,7 @@ data/*/*.ods
 data/*/*.xlsm
 data/arima/inspect_this_item.csv
 data/arima/train_cleaned.csv
+data/out/*.pkl
 
 # intellij data
 *.idea/
