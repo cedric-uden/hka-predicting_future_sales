@@ -1,5 +1,8 @@
 import matplotlib.pyplot as plt
 
+hka_red = '#D72305'
+iwi_purple = '#64378C'
+
 
 def set_defaults():
     """
@@ -9,8 +12,8 @@ def set_defaults():
     This method helps to maintain a uniform look across the project.
     """
 
-    plt.rcParams['lines.marker'] = 'o'
+    plt.rcParams['lines.color'] = iwi_purple  # override acf, pacf colors
     plt.rcParams['lines.markersize'] = 4
-    plt.rcParams['lines.markerfacecolor'] = 'red'
+    plt.rcParams['lines.markerfacecolor'] = hka_red
     plt.rcParams['figure.figsize'] = (30,10)
     plt.rcParams['legend.fontsize'] = 16
