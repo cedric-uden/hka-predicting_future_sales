@@ -85,3 +85,35 @@ To finish the comparisons, we examined the effects of applying a scaler to the d
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{ARIMA}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Part of this project was to understand the handling of a forecasting model for a time series. 
+For this, the \acrfull{arima} model was used. The \acrshort{arima} acronym is divided into three parts: \cite{MultivariateStatisticsARIMA}
+
+\begin{itemize}
+	\vspace*{-3mm}
+	\item Autoregressive\\
+	Describes the dependency among successive observations.
+	\vspace*{-3mm}
+	\item Integrated\\
+	Amount of differenciations needed to make a nonstationary time series stationary.
+	\vspace*{-3mm}
+	\item Moving Average\\
+	Describes the persistence of a random shock from one observation to the next.
+\end{itemize}
+
+With \acrshort{arima} being intended to be used for univariate problems \cite{Gron2017HandsOnML}, we had to modify the data a little bit and create our own narrative. Therefore, we analyzed the data and isolated the item that had the most sales across the time series.
+
+Similar to the linear regression, we applied the model on the raw data: this gave us a \acrshort{rmse} of \texttt{5.85736}. After analyzing the data and finetuning the \acrshort{arima} parameters, we were able to increase the performance up to \texttt{5.64160}. Very disenchanting compared to the linear regression model. The final forecast looks as following:
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.98\linewidth]{external_content/graphs/final_arima_forecast.png}
+  \captionsetup{justification=centering}
+  \captionof{figure}{ARIMA forecast of item \texttt{5822}}
+  \label{fig:arima_forecast}
+\end{figure}
+
+\vspace*{-8mm}
+\begin{center}
+\href{\finalARIMAurl}{The step-by-step procedure on how to finetune the \acrshort{arima} parameters can be found here.}
+\end{center}
