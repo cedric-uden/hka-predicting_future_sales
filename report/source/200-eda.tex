@@ -27,7 +27,7 @@ The seasonality of the data is clearly confirmed. Meanwhile, the downwards trend
 
 To finish off the brief overview, we are taking a look at the correlation between the features and the label.
 
-\begin{wrapfigure}[13]{l}{0.6\textwidth}
+\begin{wrapfigure}[11]{l}{0.57\textwidth}
 \centering
   \includegraphics[width=0.85\linewidth]{external_content/graphs/corr_matrix.png}
 \captionsetup{justification=centering}
@@ -35,10 +35,11 @@ To finish off the brief overview, we are taking a look at the correlation betwee
 \label{corr_matrix}
 \end{wrapfigure}
 
-\noindent As we can observe, the label \texttt{item\_cnt\_day} has no strong correlation between any of the given features. 
+\vspace*{6mm}
+\noindent As we can observe, the label \texttt{item\_ cnt\_day} has no strong correlation between any of the given features. 
 This most likely leads to difficult to predict models, as no clear characteristics of the label is found in relation to the various features.
 
-Additionally, no high correlation between features is observed. Therefore, we are not checking any features for multicollinearity at this point. \cite{MultivariateStatistics}
+\noindent Additionally, no high correlation between features is observed. Therefore, we are not checking any features for multicollinearity at this point. \cite{MultivariateStatistics}
 
 \subsection{Inspect outliers}\label{outliers}
 
