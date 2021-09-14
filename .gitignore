@@ -169,6 +169,9 @@ data/arima/inspect_this_item.csv
 data/arima/train_cleaned.csv
 data/out/*.pkl
 
+# submission directory
+data/submissions/*.csv
+
 # intellij data
 *.idea/
 
