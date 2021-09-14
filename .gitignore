@@ -135,6 +135,7 @@ dmypy.json
 
 # LaTeX Stuff
 *.aux
+*.out
 *.bbl
 *.blg
 *.fdb_latexmk
