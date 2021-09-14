@@ -157,6 +157,9 @@ dmypy.json
 *.bcf
 main.pdf
 
+*_svg-tex.pdf
+*_svg-tex.pdf_tex
+
 # datasets
 data/info/*.csv
 data/technical/*.csv
