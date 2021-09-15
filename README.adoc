@@ -58,11 +58,11 @@ poetry install
 
 Located in the xref:src/.[src] folder, contains additional modules that were used across the different notebooks.
 
-==== xref:src/plotting/[src/plotting]
+==== xref:src/plotting/.[src/plotting]
 
 Contains xref:src/plotting/Defaults.py[default] file to set default styles to maintain a uniform look across the project
 
-==== xref:src/util/[src/util]
+==== xref:src/util/.[src/util]
 
 - xref:src/util/ConvertingDateValues.py[ConvertingDateValues.py] operations to handle the datetime datatype within a DataFrame
 - xref:src/util/ParseDataframe.py[ParseDataframe.py] operations that parses and extracts information within a DataFrame
