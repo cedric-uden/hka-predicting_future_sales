@@ -50,7 +50,7 @@ In the next step, we have created a set of lag features. The adjoining figure il
 
 \lstinputlisting[language=python, caption=Compute Lag Features (in Python), label=lagfeatures]{external_content/code/lag_features.py}
 
-The function seen in listing \ref{lagfeatures} receives following parameters: a \gls{df}, the intervals in which the features are intended to be lagged and the features which are lagged. Then, the individual lags are iterated: begin by storing the relevant columns from the \gls{df}, add a new column, shift the date one forward and merge the newly created feature back onto the main \gls{df}.
+The function seen in listing \ref{lagfeatures} receives following parameters: a \gls{df}, the intervals in which the features are intended to be lagged and the features which are lagged. Then, the individual lags are iterated over: begin by storing the relevant columns from the \gls{df}, add a new column, shift the date one forward and merge the newly created feature back onto the passed \gls{df}.
 
 
 \subsection{Price related features}
