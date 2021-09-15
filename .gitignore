@@ -155,7 +155,6 @@ dmypy.json
 *.lot
 *.run.xml
 *.bcf
-main.pdf
 
 *_svg-tex.pdf
 *_svg-tex.pdf_tex
