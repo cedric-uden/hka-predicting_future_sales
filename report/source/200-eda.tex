@@ -11,7 +11,7 @@ To start off, we summed up the total sales of all shops and items combined to ge
 \end{figure}
 
 
-We can observe that the sales peak in the month of December. This could be due to the increasing demand of gifts and disposable income from the population, but it could also indicate special Christmas sales which are common at this time of the year. Additionally, we observe a slight decline in demand over the timespan of the dataset.
+In figure \ref{fig:total_sales}, we can observe that the sales peak in the month of December. This could be due to the increasing demand of gifts and disposable income from the population, but it could also indicate special Christmas sales which are common at this time of the year. Additionally, we observe a slight decline in demand over the timespan of the dataset.
 
 To compare and validate the above statements, we plotted the total revenue of the company:
 
@@ -23,9 +23,9 @@ To compare and validate the above statements, we plotted the total revenue of th
   \label{fig:total_revenue}
 \end{figure}
 
-The seasonality of the data is clearly confirmed. Meanwhile, the downwards trend does not appear to be of particular relevance. The revenue stream has a constant trend over the years while having fewer sales. We should hereby be aware of the trend of having fewer sales with more expensive items.
+Figure \ref{fig:total_revenue} confirms the seasonality of the data. Meanwhile, the downwards trend does not appear to be of particular relevance. The revenue stream has a constant trend over the years while having fewer sales. We should hereby be aware of the trend of having fewer sales with more expensive items.
 
-To finish off the brief overview, we are taking a look at the correlation between the features and the label.
+To finish off the brief overview, we are taking a look at the correlation between the features and the label in figure \ref{corr_matrix}.
 
 \begin{wrapfigure}[11]{l}{0.57\textwidth}
 \centering
@@ -69,7 +69,7 @@ We are now going to examine the distribution of the total sales in regards to th
   \label{fig:distribution_amongst_shops}
 \end{figure}
 
-The shops in the center of the above graph appear to be very prominent. This makes sense when we take into consideration, that the shops with ID's 20--32 are all located in Moscow, the capital of the country.
+As figure \ref{fig:distribution_amongst_shops} shows, the shops in the center of the graph appear to be very prominent. This makes sense when we take into consideration, that the shops with ID's 20--32 are all located in Moscow, the capital of the country.
 The next prominent shop in the graph, shop nr. 55, is again easily understood after finding out that this is the digital shop of the company. The digital shop is common to all stores across the country which explains its high sales count.
 
 \begin{figure}[h]
@@ -80,7 +80,7 @@ The next prominent shop in the graph, shop nr. 55, is again easily understood af
   \label{fig:distribution_amongst_item_categories}
 \end{figure}
 
-Now, when inspecting the distribution of sales within a given item category, the space division is pretty uneven. When diving into the details, we can again relatively easily make sense as of why this came across.
+Now, when inspecting the distribution of sales in figure \ref{fig:distribution_amongst_item_categories} within a given item category, the space division is pretty uneven. When diving into the details, we can again relatively easily make sense as of why this came across.
 The three most prominent item categories, are namely: PC Games, Movies \& Music. With the importance of the entertainment industry, these results are foreseeable.
 
 In contrast to the best selling items, we have inspected the categories which appear to be non-existant at first glance. After making sure that no category is missing any records, the worst selling item categories are simply explained after finding out what they are all about: a mix of niche and novelty items as well as books. The lowest selling categories with less than 10 sales each are: accessories for a long outdated gaming console, games for the Apple Mac OS platform and a various categories of books.

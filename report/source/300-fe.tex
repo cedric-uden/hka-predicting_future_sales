@@ -46,7 +46,7 @@ The last feature, \texttt{category\_is\_fancy}, evolved from the distinction in 
 \end{wrapfigure}
 
 
-In the next step, we have created a set of lag features. The adjoining figure illustrates the procedure how to create them. The idea is that, every label $y_t$ in function of its time $t$, is dependent of its preceeding value $y_{t-n}$ in a time series. $n$ is choosen to suit the time interval of the problem, for instance $n \cap \{1;2;3;6;12\}$ to consider the past two months, trimester, semester and year in a monthly spaced time series. Consequently, the lag$\_n$ series shifts the label for $n$ intervals forward in time. To accomplish this feature for several different existing features, the following function has been implemented:
+In the next step, we have created a set of lag features. The adjoining figure \ref{lag} illustrates the procedure how to create them. The idea is that, every label $y_t$ in function of its time $t$, is dependent of its preceeding value $y_{t-n}$ in a time series. $n$ is choosen to suit the time interval of the problem, for instance $n \cap \{1;2;3;6;12\}$ to consider the past two months, trimester, semester and year in a monthly spaced time series. Consequently, the lag$\_n$ series shifts the label for $n$ intervals forward in time. To accomplish this feature for several different existing features, the following function has been implemented:
 
 \lstinputlisting[language=python, caption=Compute Lag Features (in Python), label=lagfeatures]{external_content/code/lag_features.py}
 
