@@ -3,7 +3,6 @@
 :source-highlighter: rouge
 
 // Variables
-:miro_link: https://miro.com/app/board/o9J_lNamDng=/
 :conda_env_name: rp
 :python_version: 3.8
 
@@ -11,12 +10,19 @@
 
 == 📈 Introduction
 
-Repo for my 5th semester research project
+The goal of this research project was to utilize the "Future Sales" dataset from the Kaggle competition https://www.kaggle.com/c/competitive-data-science-predict-future-sales[Predict Future Sales].
+This was used to predict the sales of the upcoming months from individual items across selected branches spread across the country.
 
-== 📝 Planing
+The data consists of 2'935'849 records of individual sales from different items, span across 2.5 years (33 months to be precise, these are referenced as `date_block_num` in the project), from a Russian software firm https://1c.ru/eng/title.htm[1C Company].
+The task implied to obtain a grasp of the data by performing an EDA and using the newly gained insights to craft new features.
+The data consists of not only the items, shops and the sales itself, but also the name of the shops which includes the cities name, the item price as well as its category.
 
-Planing is done on a miro board: {miro_link}
+With the newly crafted feature engineered data, it was then applied to different linear regression models, which are well suited to solve this problem.
+Additionally, we also inspected the impact of a time series analysis along the way.
+The models were then further examined with various data manipulation techniques such as scaling or different encoding of categorical features.
 
+To proceed, comparisons were made originating observations from the EDA such as dropping certain outliers and removing shops which are considered in the training set, but not in the final testing data.
+Finally, different hyperparameters and regressive models were compared using cross validation to compare varying impacts on performance.
 
 == 🛠 Set-Up
 
