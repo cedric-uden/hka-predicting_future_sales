@@ -47,7 +47,7 @@ poetry install
 
 === Data folder
 
-- xref:data/info[info] folder containing detailed information, provided by the Kaggle competition
+- xref:./data/info/[info] folder containing detailed information, provided by the Kaggle competition
 - xref:data/technical/[technical] folder containing the train, test and submission template, provided by the Kaggle competition
 - xref:data/feature_engineering/[feature_engineering] folder containing additional information, which was researched manually, used for feature engineering
 - xref:data/arima/[arima] folder containing data generated in the ARIMA analysis
