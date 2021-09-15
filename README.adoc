@@ -13,16 +13,47 @@
 The goal of this research project was to utilize the "Future Sales" dataset from the Kaggle competition https://www.kaggle.com/c/competitive-data-science-predict-future-sales[Predict Future Sales].
 This was used to predict the sales of the upcoming months from individual items across selected branches spread across the country.
 
-The data consists of 2'935'849 records of individual sales from different items, span across 2.5 years (33 months to be precise, these are referenced as `date_block_num` in the project), from a Russian software firm https://1c.ru/eng/title.htm[1C Company].
-The task implied to obtain a grasp of the data by performing an EDA and using the newly gained insights to craft new features.
-The data consists of not only the items, shops and the sales itself, but also the name of the shops which includes the cities name, the item price as well as its category.
+== 𝌞 Contents
 
-With the newly crafted feature engineered data, it was then applied to different linear regression models, which are well suited to solve this problem.
-Additionally, we also inspected the impact of a time series analysis along the way.
-The models were then further examined with various data manipulation techniques such as scaling or different encoding of categorical features.
+=== Research notebooks
 
-To proceed, comparisons were made originating observations from the EDA such as dropping certain outliers and removing shops which are considered in the training set, but not in the final testing data.
-Finally, different hyperparameters and regressive models were compared using cross validation to compare varying impacts on performance.
+- xref:Predicting_Future_Sales.ipynb[Predicting Future Sales]: main notebook, contains the EDA and feature engineering
+- xref:In_Depth_EDA.ipynb[In Depth EDA]: concise information from the EDA that would've inflated the main notebook
+- xref:Linear_Regression.ipynb[Linear Regression]: evaluation and training of the linear models. Contains the submission to the competition
+- xref:ARIMA.ipynb[ARIMA]: evaluation of a forecasting model
+
+=== Data folder
+
+- xref:data/info/[info] folder containing detailed information, provided by the Kaggle competition
+- xref:data/technical/[technical] folder containing the train, test and submission template, provided by the Kaggle competition
+- xref:data/feature_engineering/[feature_engineering] folder containing additional information, which was researched manually, used for feature engineering
+- xref:data/arima/[arima] folder containing data generated in the ARIMA analysis
+- xref:data/out/[out] folder to store the serialized output from the feature engineering
+- xref:data/submissions/[submissions] folder to store the final submission files to submit to the Kaggle competition
+
+=== Modules
+
+Located in the xref:src/[src] folder, contains additional modules that were used across the different notebooks.
+
+==== xref:src/plotting/[src/plotting]
+
+Contains xref:src/plotting/Defaults.py[default] file to set default styles to maintain a uniform look across the project
+
+==== xref:src/util/[src/util]
+
+- xref:src/util/ConvertingDateValues.py[ConvertingDateValues.py] operations to handle the datetime datatype within a DataFrame
+- xref:src/util/ParseDataframe.py[ParseDataframe.py] operations that parses and extracts information within a DataFrame
+- xref:src/util/ListActions.py[ListActions.py] special operations on list elements
+- xref:src/util/FunctionExecTime.py[FunctionExecTime.py] function that executes and prints the execution time information from a requested function
+
+=== Report
+
+- LaTeX source files and compiled PDF of the final report
+
+=== Technicalities
+
+- xref:.gitignore[`.gitignore`] managing the repository
+- xref:poetry.lock[] & xref:pyproject.toml[] to manage the environment and packages for the project
 
 == 🛠 Set-Up
 
