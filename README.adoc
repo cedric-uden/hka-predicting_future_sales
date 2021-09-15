@@ -10,6 +10,7 @@
 
 == 📈 Introduction
 
+The research project originates from a university task in my 5th semester of computer science studies.
 The goal of this research project was to utilize the "Future Sales" dataset from the Kaggle competition https://www.kaggle.com/c/competitive-data-science-predict-future-sales[Predict Future Sales].
 This was used to predict the sales of the upcoming months from individual items across selected branches spread across the country.
 
