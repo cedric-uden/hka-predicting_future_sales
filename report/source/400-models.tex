@@ -9,7 +9,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-After creating a variety of different features, we are now going to apply them on different types of models and compare their performance.\footnote{A few results listed below date back to a previous version of the feature engineered dataset and may vary slighly in the most recent version. The conclusions drawn from the impact of a particular method remains intact.} To best compare the results, a common metric has been chosen (in particular the one to match the Kaggle competitions evaluation method): \acrfull{rmse}.
+After creating a variety of different features, we are now going to apply them on different types of models and compare their performance.\footnote{A few results listed below date back to a previous version of the feature engineered dataset and may vary slighly in the most recent version. The conclusions drawn from the impact of a particular method remain intact.} To best compare the results, a common metric has been chosen (in particular the one to match the Kaggle competitions evaluation method): \acrfull{rmse}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Linear Regression}
@@ -27,7 +27,7 @@ To start off, we determined a base score to proceed from. We simply took the tra
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Clip raw data \commitCompareModels{e8b67dc4e6f6813df2d293bd5855879723940d16}}
 
-Now, as noted in section \ref{sec:outliers}, we will apply the intended clip to the $[0;20]$ range to the train values. After this step and afterwards reapplying them onto the very same input data, the score increased significantly.
+Now, as noted in section \ref{sec:outliers}, we will apply the intended clip to the $[0;20]$ range to the train values. After this step and reapplying them onto the very same input data, the score increased significantly.
 \rmse{2.56222}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -83,7 +83,7 @@ To finish the comparisons, we examined the effects of applying a scaler to the d
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{ARIMA}
+\subsection{ARIMA forecast}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Another part of this project was to understand the handling of a forecasting model in a time series. 
@@ -98,7 +98,7 @@ For this, the \acrfull{arima} model was used. The \acrshort{arima} acronym is di
 	Amount of differenciations needed to make a nonstationary time series stationary.
 	\vspace*{-3mm}
 	\item Moving Average\\
-	Describes the persistence of a random shock from one observation to the next.
+	Describes the impact of a random shock from one observation to the next.
 \end{itemize}
 
 With \acrshort{arima} being intended to be used for univariate problems \cite{Gron2017HandsOnML}, we had to modify the data a little bit and create our own narrative. Therefore, we analyzed the data and isolated the item, item nr. \texttt{5822}, that had the most sales across the time series.

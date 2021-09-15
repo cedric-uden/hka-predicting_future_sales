@@ -1,13 +1,13 @@
 The goal of this research project was to utilize the \enquote{\gls{futuresales}} dataset from the Kaggle competition \enquote{\href{https://www.kaggle.com/c/competitive-data-science-predict-future-sales}{Predict Future Sales}} to create a machine learning prediction model.
-The model was then used to predict the sales of the upcoming month from individual items across selected branches spread across the country.
+The model was then used to predict the sales of the upcoming month from individual items, across selected branches spread within the country.
 
 The data consists of $2'935'849$ records of individual sales from different items, span across \mbox{2 \textonehalf} \ years\footnote{33 months to be precise, these are referenced as \texttt{date\_block\_num} in the project}, from a Russian software firm \href{https://1c.ru/eng/title.htm}{\enquote{1C Company}}.
-The task implied to obtain a grasp of the data by performing an \acrfull{eda} and using the newly gained insights to craft new features.
+The task implied to obtain a grasp of the data by performing an \acrfull{eda} and using the newly gained domain knowledge to craft new features.
 The data consists not only of the items, shops and the sales itself, but also the name of the shops which includes the cities name, the item price and their category.
 
-With the feature engineered dataset, we then applied it to different linear regression models, which are well suited to solve this problem.
-The models were then further examied with various data manipulation techniques such as scaling and different encodings of categorical features.
-Additionally, we also inspected the impact of a time series analysis using \acrshort{arima} along the way.
+With the feature engineered dataset, we then applied it to different linear regression models, which turned out to be well suited to solve this problem.
+The models were then further examied with various data manipulation techniques such as scaling and regularization.
+Additionally, we inspected the impact of a time series analysis using \acrshort{arima} along the way.
 
-To proceed, comparisons were made originating observations from the \acrshort{eda} such as dropping certain outliers and removing shops which are exclusively considered in the training set.
+To proceed, comparisons were made between observations originating from the \acrshort{eda} such as dropping certain outliers and removing shops which are exclusively considered in the training set.
 Finally, different \glspl{hyperparameter} and regressive models were compared using cross validation to evaluate their varying impacts on performance.
