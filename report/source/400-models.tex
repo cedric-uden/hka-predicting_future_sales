@@ -9,13 +9,13 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-After creating a variety of different features, we are now going to apply them on different types of models and compare their performance.\footnote{A few results listed below date back to a previous version of the feature engineered dataset and may vary slighly in the most recent version. The conclusions drawn from the impact of a particular method remain intact.} To best compare the results, a common metric has been chosen (in particular the one to match the Kaggle competitions evaluation method): \acrfull{rmse}.
+After creating a variety of different features, we are now going to apply them on different types of models and compare their performance.\footnote{A few results listed below date back to a previous version of the feature engineered dataset and may vary slighly in the most recent version. The conclusions drawn from the impact of a particular method remain intact.} To best compare the results, a common metric has been chosen (in particular to match the Kaggle competitions evaluation method): \acrfull{rmse}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Linear Regression}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-In this section we are incrementaly going to inspect the various parameters and inputs applied to the model and examine their direct impact. All steps have been documented in separate GIT commits and linked to the respective commit for reference.
+In this section we are incrementally going to inspect the various parameters and inputs applied to the model and examine their direct impact. All steps have been documented in separate GIT commits and linked to the respective commit for reference.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Raw data\commitCompareModels{5df6ba024166903c829daa9c51c5fafa13e2480a}}
@@ -33,7 +33,7 @@ Now, as noted in section \ref{sec:outliers}, we will apply the intended clip to 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Add zero sales \commitCompareModels{ccfe1162ca359dd7ca99b8accc525b053ec8df0d}}
 
-In this step, we have added the zero sales, referenced in section \ref{zerosales}, onto the training data. We can again see a significant increase in the models performance.
+In this step, we have added the zero sales, referenced in section \ref{zerosales}, onto the training data. We can again see a significant increase in the model's performance.
 \rmse{1.22789}
 
 
@@ -59,7 +59,7 @@ As observed in section \ref{sec:testdata}, about 30\% of the shops present in th
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Applying LASSO regression \commitCompareModels{b89f6dacc0c95a63d1b2b6da1d09524549eb33b6}}
 
-Next up, we attempted to apply the data to a \acrshort{lasso} model. The result was very shocking: the performance worsen significantly.
+Next up, we attempted to apply the data to a \acrshort{lasso} model. The result was very shocking: the performance worsens significantly.
 \rmse{0.98846}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -95,7 +95,7 @@ For this, the \acrfull{arima} model was used. The \acrshort{arima} acronym is di
 	Describes the dependency among successive observations.
 	\vspace*{-3mm}
 	\item Integrated\\
-	Amount of differenciations needed to make a nonstationary time series stationary.
+	Number of differentiations needed to make a nonstationary time series stationary.
 	\vspace*{-3mm}
 	\item Moving Average\\
 	Describes the impact of a random shock from one observation to the next.

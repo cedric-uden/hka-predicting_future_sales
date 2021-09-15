@@ -23,9 +23,9 @@ This operation was implemented using the Python function \texttt{product} from t
 
 To add detailed information about the shops, we first identified the city in which a shop is located. To continue from there, we researched geographic and demographic data. This information was added to a spreadsheet and exported as \acrfull{csv} file in a similar manner to the original dataset. The following features have been added: \texttt{zip\_code}, \texttt{region}, \texttt{population}, \texttt{population\_growth} and \texttt{region\_gdp}.
 
-The population growth was considered, on a city level, from a time frame roughly between 2010--2018. (varying according to different sources from discovered materials)
+The population growth was considered, on a city level, from a time frame roughly between 2010--2018 (varying according to different sources from discovered materials).
 
-The population and gdp (per capita) information was primarily taken from the year 2018. Again, this was due to the abundance of information publicly available for this period.
+The population and gdp (per capita) information were primarily taken from the year 2018. Again, this was due to the abundance of information publicly available for this period.
 
 \subsection{Category information}
 
@@ -47,7 +47,7 @@ The feature \texttt{category\_is\_fancy}, evolved from the distinction in certai
 
 
 In the next step, we have created a set of lag features. The adjoining figure \ref{lag} illustrates their implementation. 
-The idea is that, in a time series, every label $y_t$, in function of its time $t$, is dependent on its preceeding value $y_{t-n}$.
+The idea is that, in a time series, every label $y_t$, in function of its time $t$, is dependent on its preceding value $y_{t-n}$.
 $n$ is chosen to suit the time interval of the problem, for instance $n \cap \{1;2;3;6;12\}$ to consider the past two months, trimester, semester and year in a monthly spaced time series. Consequently, the lag$\_n$ series shifts the label for $n$ intervals forward in time. To apply this feature on several different existing features, the following function has been implemented:
 
 \lstinputlisting[language=python, caption=Compute Lag Features (in Python), label=lagfeatures]{external_content/code/lag_features.py}
@@ -57,7 +57,7 @@ The function seen in listing \ref{lagfeatures} receives following parameters: a 
 
 \subsection{Price related features}
 
-Primarily to avoid throwing the new items from the test set, identified in section \ref{sec:testdata}, in the cold water, a variety of average prices has been calculated. This includes the average price of a given item over all, as well as the average price from an item in a given shop and the average price of items in a given category.
+Primarily to avoid throwing the new items from the test set, identified in section \ref{sec:testdata}, in the cold water, a variety of average prices has been calculated. This includes the average price of a given item overall, as well as the average price from an item in each shop and the average price of items in a given category.
 This is intended to nudge the model in a certain direction.
 
 On top of that, a trend feature has been added. This is effectively a lag of the item price. 
@@ -65,7 +65,7 @@ This indicates the direction of item prices. This accounts for the trend observe
 
 \subsection{Additional features}
 
-To finish off the feature engineering, a few selected features have been crafted representing additional information gathered from the time data. A few are really simple features, such as the month of the year. This is intended to take the seasonality into account. A feature which holds the amount of days in a month, with intents to explain the difference in sales when having a month with 31 days or 28 days, thus having roughly 10\% more days where the shops are opened.
+To finish off the feature engineering, a few selected features have been crafted representing additional information gathered from the time data. A few are simple features, such as the month of the year. This is intended to take the seasonality into account. A feature which holds the number of days in a month, with intents to explain the difference in sales when having a month with 31 days or 28 days, thus having roughly 10\% more days where the shops are opened.
 
-Another set of features, which has been a little bit trickier to implement, is the record of when an item has been initially and most recently sold on a company wide and on a given shop basis.
+Another set of features, which has been a little bit trickier to implement, is the record of when an item has been initially and most recently sold on a companywide and on a given shop basis.
 To achieve this, we created a set for each feature respectively, and stored a key pair \texttt{(item\_id, shop\_id)}with the resulting dates. Finally, the set has been matched to the corresponding rows in the \gls{df}.
