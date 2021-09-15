@@ -47,13 +47,14 @@ In this section, we are going to examine potential outliers in the training data
 
 \begin{figure}[h]
   \centering
-  \includegraphics[width=0.8\linewidth]{external_content/graphs/outliers-item_price.png}
+  \includegraphics[width=0.78\linewidth]{external_content/graphs/outliers-item_price.png}
   \captionsetup{justification=centering}
   \captionof{figure}{Outliers of the feature \texttt{item\_price}}
   \label{fig:item_price_outliers}
 \end{figure}
 
-We can identify all but one heavy outlier from the above plot. After inspecting the outlier, we can be sure that the record is not faulty: the item in question, item nr. 6066, is a single record of a software license for 522 people.\footnote{\href{https://translate.google.com/?sl=ru&tl=en&text=Radmin\%203\%20\%20-\%20522\%20\%D0\%BB\%D0\%B8\%D1\%86.&op=translate }{Translation} - \href{https://www.radmin.com/ordering/}{Software}}
+\vspace*{-4mm}
+Figure \ref{fig:item_price_outliers} shows an unorthodox looking boxplot. This is due to the quartiles, median and whiskers all being concentrated around the median price of 890. This helps us to identify any outliers. After inspecting the single outlier, we can be sure that the record is not faulty: the item in question, item nr. 6066, is a single record of a software license for 522 people.\footnote{\href{https://translate.google.com/?sl=ru&tl=en&text=Radmin\%203\%20\%20-\%20522\%20\%D0\%BB\%D0\%B8\%D1\%86.&op=translate }{Translation} - \href{https://www.radmin.com/ordering/}{Software}}
 
 Fortunately, upon further examination, we were able to verify that the item in question is not present in the testing data and therefore not relevant for the problem.
 
@@ -63,7 +64,7 @@ We are now going to examine the distribution of the total sales in regards to th
 
 \begin{figure}[h]
   \centering
-  \includegraphics[width=0.8\linewidth]{external_content/graphs/distribution_amongst_shops.png}
+  \includegraphics[width=0.78\linewidth]{external_content/graphs/distribution_amongst_shops.png}
   \captionsetup{justification=centering}
   \captionof{figure}{Distribution of total item sales across the different shops}
   \label{fig:distribution_amongst_shops}
