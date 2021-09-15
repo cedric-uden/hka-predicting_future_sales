@@ -25,7 +25,6 @@ To compare and confirm the above statements, we plotted the monthly revenue of t
 
 Figure \ref{fig:total_revenue} confirms the seasonality of the data. Meanwhile, the downwards trend does not appear to be of relevance for the company.
 While having fewer sales, the revenue stream has a relatively foreseeable development over the years. 
-% TODO: verify the below sentence
 We should hereby take note of the trend of having fewer sales, which consequently implies more expensive items.
 
 To finish off the brief overview, we are looking at the correlation between the features and the label in figure \ref{corr_matrix}.
@@ -91,8 +90,7 @@ In contrast to the best-selling items, we have inspected the categories which ap
 
 \subsection{Understanding the test data} \label{sec:testdata}
 
-The test data contains a total of $214'200$ entries to be predicted. Considering the total amount of records in the train data, the relation of $13.7$ train records per test record does not appear to be as significant as first presumed.
-% TODO: change above to "as one might presume"
+The test data contains a total of $214'200$ entries to be predicted. Considering the total amount of records in the train data, the relation of $13.7$ train records per test record does not appear to be as significant as one might presume.
 This surprising low number highlights the importance of a thorough feature engineering in order to create a robust model.
 
 Before that, we are looking at how the test data came about. After isolating the \texttt{shop\_id} and \texttt{item\_id} duplicates, the number $214'200$ is quickly demystified: there are $5100$ unique items and $42$ (of $60$) unique shops. 
