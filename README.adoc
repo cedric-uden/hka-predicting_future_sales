@@ -76,7 +76,7 @@ Contains xref:src/plotting/Defaults.py[default] file to set default styles to ma
 === Technicalities
 
 - xref:.gitignore[`.gitignore`] managing the repository
-- xref:poetry.lock[] & xref:pyproject.toml[] to manage the environment and packages for the project
+- xref:poetry.lock[`poetry.lock`] & xref:pyproject.toml[`pyproject.toml`] to manage the environment and packages for the project
 
 == ⚠️ Troubleshooting
 
