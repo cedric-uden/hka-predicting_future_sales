@@ -101,7 +101,7 @@ For this, the \acrfull{arima} model was used. The \acrshort{arima} acronym is di
 	Describes the persistence of a random shock from one observation to the next.
 \end{itemize}
 
-With \acrshort{arima} being intended to be used for univariate problems \cite{Gron2017HandsOnML}, we had to modify the data a little bit and create our own narrative. Therefore, we analyzed the data and isolated the item that had the most sales across the time series.
+With \acrshort{arima} being intended to be used for univariate problems \cite{Gron2017HandsOnML}, we had to modify the data a little bit and create our own narrative. Therefore, we analyzed the data and isolated the item, item \texttt{5822}, that had the most sales across the time series.
 
 Similar to the linear regression, we applied the model on the raw data: this gave us a \acrshort{rmse} of \texttt{5.85736}. After analyzing the data and finetuning the \acrshort{arima} parameters, we were able to increase the performance up to \texttt{5.64160}. Very disenchanting compared to the linear regression model. The final forecast looks as following:
 
