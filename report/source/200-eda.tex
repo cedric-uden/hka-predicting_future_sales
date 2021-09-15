@@ -1,19 +1,19 @@
 \subsection{Brief overview}
 
-To start off, we summed up the total sales of all shops and items combined to get a feel of potential seasonal outliers as well as a general trend.
+To get a feel of potential seasonal outliers as well as a general trend, we summed up the total sales of all shops and items combined.
 
 \begin{figure}[h]
   \centering
-  \includegraphics[width=0.9\linewidth]{external_content/graphs/total_sales.png}
+  \includegraphics[width=0.86\linewidth]{external_content/graphs/total_sales.png}
   \captionsetup{justification=centering}
   \captionof{figure}{Total sales of the company}
   \label{fig:total_sales}
 \end{figure}
 
 
-In figure \ref{fig:total_sales}, we can observe that the sales peak in the month of December. This could be due to the increasing demand of gifts and disposable income from the population, but it could also indicate special Christmas sales which are common at this time of the year. Additionally, we observe a slight decline in demand over the timespan of the dataset.
+In figure \ref{fig:total_sales}, we can observe that the sales peak in the month of December. This could be due to the increasing demand of gifts and disposable income from the population, but could also indicate special Christmas sales which are common at this time of the year. Additionally, we observe a slight decline in demand over the timespan of the dataset.
 
-To compare and validate the above statements, we plotted the total revenue of the company:
+To compare and confirm the above statements, we plotted the total revenue of the company:
 
 \begin{figure}[h]
   \centering
@@ -23,7 +23,8 @@ To compare and validate the above statements, we plotted the total revenue of th
   \label{fig:total_revenue}
 \end{figure}
 
-Figure \ref{fig:total_revenue} confirms the seasonality of the data. Meanwhile, the downwards trend does not appear to be of particular relevance. The revenue stream has a constant trend over the years while having fewer sales. We should hereby be aware of the trend of having fewer sales with more expensive items.
+Figure \ref{fig:total_revenue} confirms the seasonality of the data. Meanwhile, the downwards trend does not appear to be of particular relevance to the company.
+While having fewer sales, the revenue stream has a relatively constant development over the years. We should hereby be aware of the trend of having fewer sales, which consequently implies more expensive items.
 
 To finish off the brief overview, we are taking a look at the correlation between the features and the label in figure \ref{corr_matrix}.
 
@@ -39,9 +40,9 @@ To finish off the brief overview, we are taking a look at the correlation betwee
 \noindent As we can observe, the label \texttt{item\_ cnt\_day} has no strong correlation between any of the given features. 
 This most likely leads to difficult to predict models, as no clear characteristics of the label is found in relation to the various features.
 
-\noindent Additionally, no high correlation between features is observed. Therefore, we are not checking any features for multicollinearity at this point. \cite{MultivariateStatistics}
+\noindent Additionally, no high correlation between features is observed. Therefore, we are not worried about multicollinearity at this point. \cite{MultivariateStatistics}
 
-\subsection{Inspect outliers}\label{outliers}
+\subsection{Inspect outliers}\label{sec:outliers}
 
 In this section, we are going to examine potential outliers in the training data and observe their distribution. As the \href{https://www.kaggle.com/c/competitive-data-science-predict-future-sales/overview/evaluation}{competition guidelines} suggest to clip the true target values to 20, we can savely ignore the outliers from the label as these will be clipped regardless.
 
@@ -56,11 +57,11 @@ In this section, we are going to examine potential outliers in the training data
 \vspace*{-4mm}
 Figure \ref{fig:item_price_outliers} shows an unorthodox looking boxplot. This is due to the quartiles, median and whiskers all being concentrated around the median price of 890. This helps us to identify any outliers. After inspecting the single outlier, we can be sure that the record is not faulty: the item in question, item nr. 6066, is a single record of a software license for 522 people.\footnote{\href{https://translate.google.com/?sl=ru&tl=en&text=Radmin\%203\%20\%20-\%20522\%20\%D0\%BB\%D0\%B8\%D1\%86.&op=translate }{Translation} - \href{https://www.radmin.com/ordering/}{Software}}
 
-Fortunately, upon further examination, we were able to verify that the item in question is not present in the testing data and therefore not relevant for the problem.
+Fortunately, upon further examination, we were able to verify that the item in question is not present in the testing data and therefore not relevant for the final prediction.
 
 \subsection{Distribution of sales among shops and across item categories}
 
-We are now going to examine the distribution of the total sales in regards to the different shops as well as the different item categories. The goal is again to detect potential outliers and to get an understanding of how the sales record came about.
+We are now going to examine the distribution of the total sales in regards to the different shops as well as the different item categories. The goal is, again, to detect potential outliers and to get an understanding of how the sales record came about.
 
 \begin{figure}[h]
   \centering
@@ -70,7 +71,7 @@ We are now going to examine the distribution of the total sales in regards to th
   \label{fig:distribution_amongst_shops}
 \end{figure}
 
-As figure \ref{fig:distribution_amongst_shops} shows, the shops in the center of the graph appear to be very prominent. This makes sense when we take into consideration, that the shops with ID's 20--32 are all located in Moscow, the capital of the country.
+As figure \ref{fig:distribution_amongst_shops} shows, the shops in the center of the graph appear to be very prominent. This makes sense when we take into consideration that the shops with ID's 20--32, are all located in Moscow, the capital of the country.
 The next prominent shop in the graph, shop nr. 55, is again easily understood after finding out that this is the digital shop of the company. The digital shop is common to all stores across the country which explains its high sales count.
 
 \begin{figure}[h]
@@ -81,15 +82,15 @@ The next prominent shop in the graph, shop nr. 55, is again easily understood af
   \label{fig:distribution_amongst_item_categories}
 \end{figure}
 
-Now, when inspecting the distribution of sales in figure \ref{fig:distribution_amongst_item_categories} within a given item category, the space division is pretty uneven. When diving into the details, we can again relatively easily make sense as of why this came across.
+Now, when inspecting figure \ref{fig:distribution_amongst_item_categories}, the distribution of sales within a given item category, the space division is pretty uneven. When diving into the details, we can relatively easily make sense as of why this came across.
 The three most prominent item categories, are namely: PC Games, Movies \& Music. With the importance of the entertainment industry, these results are foreseeable.
 
-In contrast to the best selling items, we have inspected the categories which appear to be non-existant at first glance. After making sure that no category is missing any records, the worst selling item categories are simply explained after finding out what they are all about: a mix of niche and novelty items as well as books. The lowest selling categories with less than 10 sales each are: accessories for a long outdated gaming console, games for the Apple Mac OS platform and a various categories of books.
+In contrast to the best selling items, we have inspected the categories which appear to be non-existant at first glance. After making sure that no category is missing any records, the worst selling item categories are simply explained after finding out what they are all about: a mix of niche and novelty items, as well as books. The lowest selling categories, with less than 10 sales each, are: accessories for a long outdated gaming console, games for the Apple Mac OS platform and various categories of books.
 
-\subsection{Understanding the test data}
+\subsection{Understanding the test data} \label{sec:testdata}
 
 The test data contains a total of $214'200$ entries to be predicted. Considering the total amount of records in the train data, the relation between $13.7$ train records per test record does not appear to be very significant anymore. This surprising low number highlights the importance of a thorough feature engineering in order to create a robust model.
 
-Before that, we are taking a look at how the test data came about. After isolating the \texttt{shop\_id} and \texttt{item\_id} duplicates, the number $214'200$ is quickly demystified: there are $5100$ unique items and $42$ unique shops. This factors up neatly to $214'200$, which in conclusion, tells us that there are exactly $5100$ items in each and every (present) shop to be predicted.
+Before that, we are taking a look at how the test data came about. After isolating the \texttt{shop\_id} and \texttt{item\_id} duplicates, the number $214'200$ is quickly demystified: there are $5100$ unique items and $42$ (of $60$) unique shops. This factors up neatly to $214'200$, which in conclusion, tells us that there are exactly $5100$ items in each and every (present) shop to be predicted.
 
-Finally, the \href{https://www.kaggle.com/c/competitive-data-science-predict-future-sales/data}{description of the Kaggle competition} hints at us to inspect if there are any new items in the test data, which are at no point in time present in the train data. Indeed, after subtracting two sets of the total items from both datasets, we can identify that there are $363$ new items, hence a total of $363*42=15'246$ entries that have never been seen by the trained model.
+Finally, the \href{https://www.kaggle.com/c/competitive-data-science-predict-future-sales/data}{description of the Kaggle competition} hints to inspect if there are any new items in the test data (which are at no point in time present in the train data). Indeed, after subtracting two sets of the total items from both datasets, we can identify that there are $363$ new items, hence a total of $363*42=15'246$ entries that have never been seen by the trained model.

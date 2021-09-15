@@ -1,7 +1,7 @@
 \subsection{Create zero sales}\label{zerosales}
 
-The training dataset tells us exactly which item got sold when and where. At the same time, this tells us exactly which shop did not sell any given item on a given date.
-With this information, we can craft the possibly most important feature of them all: add the records from a possible combination of a given month, all shops and all items and fill the sale record with 0. This operation was dubbed \enquote{create zero sales}.
+The training dataset tells us exactly which item got sold when and where. At the same time, this tells us exactly which shop did not sell any item on a given date.
+With this information, we can craft the possibly most important feature of them all: add the records from a possible combination of a given month, all shops and all items. Then fill the sale record with 0. This operation was dubbed \enquote{create zero sales}.
 The mathematical function of this operation can be expressed with the following cartesian product:
 
 \vspace*{-4mm}
@@ -29,11 +29,11 @@ The population and gdp (per capita) information was primarily taken from the yea
 
 \subsection{Category information}
 
-The process of arranging detailed features for the various categories was definitely more arbitrary compared to the shop information. After translating all 84 categories, some were very specific and hereby intuitive, for instance the category 12 \enquote{Game consoles - PS4}. This could easily be split into a type (\enquote{game console}), a dedicated device (\enquote{ps4}), platform (\enquote{playstation}), manufacturer (\enquote{sony}) and a medium (\enquote{physical}).
+Compared to the shop information, the process of arranging detailed features for the various categories was relatively arbitrary. After translating all 84 categories, some were very specific and hereby intuitive, for instance the category 12 \enquote{Game consoles - PS4}. This could easily be split into a type (\enquote{game console}), a dedicated device (\enquote{ps4}), platform (\enquote{playstation}), manufacturer (\enquote{sony}) and a medium (\enquote{physical}).
 
-The same distinctions were harder to make for other categories like \enquote{Gifts - Stuffed Toys} or \enquote{Service}. These could be interpreted very differently, we attempted to create meaningful splits to our best intentions. The resulting features can be found in the \acrshort{csv} file \href{\repoblobbaseurl\finalCommit/data/feature_engineering/cities.csv}{on GitHub}.
+The same distinctions were harder to make for other categories like \enquote{Gifts - Stuffed Toys} or \enquote{Service}. As these can be interpreted very differently, we attempted to create meaningful splits to our best intentions. The resulting features can be found in the \acrshort{csv} file \href{\repoblobbaseurl\finalCommit/data/feature_engineering/cities.csv}{on GitHub}.
 
-The last feature, \texttt{category\_is\_fancy}, evolved from the distinction in certain existing categories like \enquote{PC Games - Standard Editions} and \enquote{PC Games - Collector's Editions} which expects the latter to have a narrower target audience for a same title.
+The feature \texttt{category\_is\_fancy}, evolved from the distinction in certain existing categories like \enquote{PC Games - Standard Editions} and \enquote{PC Games - Collector's Editions} which expects the latter to have a narrower target audience for a same title.
 
 \subsection{Lag features}
 
@@ -46,23 +46,26 @@ The last feature, \texttt{category\_is\_fancy}, evolved from the distinction in 
 \end{wrapfigure}
 
 
-In the next step, we have created a set of lag features. The adjoining figure \ref{lag} illustrates the procedure how to create them. The idea is that, every label $y_t$ in function of its time $t$, is dependent of its preceeding value $y_{t-n}$ in a time series. $n$ is choosen to suit the time interval of the problem, for instance $n \cap \{1;2;3;6;12\}$ to consider the past two months, trimester, semester and year in a monthly spaced time series. Consequently, the lag$\_n$ series shifts the label for $n$ intervals forward in time. To accomplish this feature for several different existing features, the following function has been implemented:
+In the next step, we have created a set of lag features. The adjoining figure \ref{lag} illustrates their implementation. 
+The idea is that, in a time series, every label $y_t$, in function of its time $t$, is dependent on its preceeding value $y_{t-n}$.
+$n$ is choosen to suit the time interval of the problem, for instance $n \cap \{1;2;3;6;12\}$ to consider the past two months, trimester, semester and year in a monthly spaced time series. Consequently, the lag$\_n$ series shifts the label for $n$ intervals forward in time. To accomplish this feature for several different existing features, the following function has been implemented:
 
 \lstinputlisting[language=python, caption=Compute Lag Features (in Python), label=lagfeatures]{external_content/code/lag_features.py}
 
-The function seen in listing \ref{lagfeatures} receives following parameters: a \gls{df}, the intervals in which the features are intended to be lagged and the features which are lagged. Then, the individual lags are iterated over: begin by storing the relevant columns from the \gls{df}, add a new column, shift the date one forward and merge the newly created feature back onto the passed \gls{df}.
+The function seen in listing \ref{lagfeatures} receives following parameters: a \gls{df} \texttt{df}, the intervals \texttt{lags} in which the features are intended to be lagged and the features which are lagged. Then, the individual lags are iterated over: begin by storing the relevant columns from the \gls{df}, add a new column, shift the date \texttt{n} forward and merge the newly created feature back onto the passed \gls{df}.
 
 
 \subsection{Price related features}
 
-Primarily to avoid throwing the new items in the test set in cold water, a variety of average prices has been calculated. This includes the average price of a given item over all, as well as the average price from an item in a given shop and the average price of items in a given category.
+Primarily to avoid throwing the new items from the test set, identified in section \ref{sec:testdata}, in the cold water, a variety of average prices has been calculated. This includes the average price of a given item over all, as well as the average price from an item in a given shop and the average price of items in a given category.
 This is intended to nudge the model in a certain direction.
 
-On top of that, a trend feature has been added. This is effectively a lag of the item price. This indicates the trending item price in order to account for the trend observed in figure \ref{fig:total_sales} and figure \ref{fig:total_revenue} which implies fewer sales with a rising revenue over time.
+On top of that, a trend feature has been added. This is effectively a lag of the item price. 
+This indicates the directon of item prices, in order to account for the trend observed in figure \ref{fig:total_sales} and figure \ref{fig:total_revenue}, which imply fewer sales with rising item prices over time.
 
 \subsection{Additional features}
 
-To finish off the feature engineering, a few selected features have been crafted representing additional information from the time data. A few are really simple features, such as the month of the year. This is intended to take the seasonality into account. And a feature which holds the amount of days in a month, this intents to explain the difference in sales when having a month with 31 days or 28 days, thus having roughly 10\% more days where the shops are opened.
+To finish off the feature engineering, a few selected features have been crafted representing additional information gathered from the time data. A few are really simple features, such as the month of the year. This is intended to take the seasonality into account. A feature which holds the amount of days in a month, this intents to explain the difference in sales when having a month with 31 days or 28 days, thus having roughly 10\% more days where the shops are opened.
 
 Another set of features, which has been a little bit trickier to implement, is the record of when an item has been initially and most recently sold on a company wide and on a given shop basis.
 To achieve this, we created a set for each feature respectively, and stored a key pair \texttt{(item\_id, shop\_id)}with the resulting dates. Finally, the set has been matched to the corresponding rows in the \gls{df}.
