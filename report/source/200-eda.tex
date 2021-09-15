@@ -1,6 +1,6 @@
 \subsection{Brief overview}
 
-To get a feel of potential seasonal irregularities as well as a general trend, we summed up the monthly sales of all shops and items combined.
+To get a feel for potential seasonal irregularities as well as for the general trend, we summed up the monthly sales of all shops and items combined.
 
 \begin{figure}[h]
   \centering
@@ -13,7 +13,7 @@ To get a feel of potential seasonal irregularities as well as a general trend, w
 
 In figure \ref{fig:total_sales}, we can observe that the sales peak in the month of December. This could be due to the increasing demand of gifts and disposable income from the population but could also indicate special Christmas sales which are common at this time of the year. Additionally, we observe a slight decline in demand over the timespan of the dataset.
 
-To compare and confirm the above statements, we plotted the total revenue of the company:
+To compare and confirm the above statements, we plotted the monthly revenue of the company:
 
 \begin{figure}[h]
   \centering
@@ -23,8 +23,10 @@ To compare and confirm the above statements, we plotted the total revenue of the
   \label{fig:total_revenue}
 \end{figure}
 
-Figure \ref{fig:total_revenue} confirms the seasonality of the data. Meanwhile, the downwards trend does not appear to be of relevance to the company.
-While having fewer sales, the revenue stream has a relatively foreseeable development over the years. We should hereby take note of the trend of having fewer sales, which consequently implies more expensive items.
+Figure \ref{fig:total_revenue} confirms the seasonality of the data. Meanwhile, the downwards trend does not appear to be of relevance for the company.
+While having fewer sales, the revenue stream has a relatively foreseeable development over the years. 
+% TODO: verify the below sentence
+We should hereby take note of the trend of having fewer sales, which consequently implies more expensive items.
 
 To finish off the brief overview, we are looking at the correlation between the features and the label in figure \ref{corr_matrix}.
 
@@ -89,11 +91,13 @@ In contrast to the best-selling items, we have inspected the categories which ap
 
 \subsection{Understanding the test data} \label{sec:testdata}
 
-The test data contains a total of $214'200$ entries to be predicted. Considering the total amount of records in the train data, the relation of $13.7$ train records per test record does not appear to be as significant as first presumed. This surprising low number highlights the importance of a thorough feature engineering in order to create a robust model.
+The test data contains a total of $214'200$ entries to be predicted. Considering the total amount of records in the train data, the relation of $13.7$ train records per test record does not appear to be as significant as first presumed.
+% TODO: change above to "as one might presume"
+This surprising low number highlights the importance of a thorough feature engineering in order to create a robust model.
 
 Before that, we are looking at how the test data came about. After isolating the \texttt{shop\_id} and \texttt{item\_id} duplicates, the number $214'200$ is quickly demystified: there are $5100$ unique items and $42$ (of $60$) unique shops. 
 This factors up neatly to $214'200$.
 In conclusion, this tells us that there are exactly $5100$ items in each (present) shop to be predicted.
 
 Finally, the \href{https://www.kaggle.com/c/competitive-data-science-predict-future-sales/data}{description of the Kaggle competition} hints to inspect if there are any new items in the test data (which are at no point in time present in the train data). 
-Indeed, after subtracting two sets of the total items from both datasets, we can identify that there are $363$ new items, hence a total of $363*42=15'246$ entries that have never been seen by the trained model.
+Indeed, after subtracting two sets of the total items from both datasets, we can identify that there are $363$ new items, hence a total of $363 \cdot 42=15'246$ entries that have never been seen by the trained model.

@@ -4,6 +4,7 @@
 		\begin{tcolorbox}[colback=white, colframe=iwiPurple, halign=flush center, width=0.8\linewidth, boxrule=1pt, arc=4mm]
 				\Acrshort{rmse} :\ \ \textbf{\texttt{#1}}
 		\end{tcolorbox}
+	\vspace*{-2mm}
 	\end{center}
 }
 
@@ -15,7 +16,7 @@ After creating a variety of different features, we are now going to apply them o
 \subsection{Linear Regression}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-In this section we are incrementally going to inspect the various parameters and inputs applied to the model and examine their direct impact. All steps have been documented in separate GIT commits and linked to the respective commit for reference.
+In this section we are incrementally going to inspect the various parameters and inputs applied to the model and examine their direct impact. All steps have been documented in separate Git commits and linked to the respective commit for reference.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Raw data\commitCompareModels{5df6ba024166903c829daa9c51c5fafa13e2480a}}
@@ -47,13 +48,13 @@ Finally, the --- long anticipated --- feature engineered data. How will the mode
 \subsubsection{Applying \texttt{cross\_val\_score} \commitCompareModels{0c0ddf6b624009a9d8740c769a8ec1cecfe8d2a3}}
 
 In order to get a more realistic approximation of the final score on the test data, we have now switched to the more sophisticated \texttt{cross\_val\_score}\footnote{\href{https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.cross_val_score.html}{\texttt{cross\_val\_score} documentation}} evaluation. This action is significantly heavier on execution time, as the same input data is split into various validation sets internally (5 by default).
-We can see that our \texttt{train\_test\_split} selection got lucky before, we can observe a small dent in performance.
+We can see that our \texttt{train\_test\_split} selection got lucky before, as we observe a small dent in performance.
 \rmse{0.82563}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Dropping superfluous shops \commitCompareModels{c47eb457417a0eb117c042227917edf2d913dc6a}}
 
-As observed in section \ref{sec:testdata}, about 30\% of the shops present in the train data, are irrelevant to the final test data. In theory, this should not change anything when performing a split on the train data. But, maybe the authors of the competition had certain irregularities, such as the detected price outliers in section \ref{sec:outliers} which is confirmed to be irrelevant for the test prediction, in mind when setting the environment for the competition. Our result was satisfying:
+As observed in section \ref{sec:testdata}, about 30\% of the shops present in the train data are irrelevant to the final test data. In theory, this should not change anything when performing a split on the train data. But, maybe the authors of the competition had certain irregularities (such as the detected price outliers in section \ref{sec:outliers} which is confirmed to be irrelevant for the test prediction) in mind when setting the environment for the competition. Our result was satisfying:
 \rmse{0.81432}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -72,7 +73,7 @@ Now, onto the Ridge model. We were now back to our original performance:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Applying Ridge cross-validation \commitCompareModels{a315c8fcf004c256a87f43bf44b9555b66233b80}}
 
-As a final evaluation of different regularization attempts, we tried a cross-validation to determine the best parameters. To our surprise, this did not yield any improvement either:
+As a final evaluation of different regularization attempts, we tried a cross-validation to determine the best \glspl{hyperparameter}. To our surprise, this did not yield any improvement either:
 \rmse{0.81432}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -91,13 +92,13 @@ For this, the \acrfull{arima} model was used. The \acrshort{arima} acronym is di
 
 \begin{itemize}
 	\vspace*{-3mm}
-	\item Autoregressive\\
+	\item \textbf{Autoregressive}\\
 	Describes the dependency among successive observations.
 	\vspace*{-3mm}
-	\item Integrated\\
+	\item \textbf{Integrated}\\
 	Number of differentiations needed to make a nonstationary time series stationary.
 	\vspace*{-3mm}
-	\item Moving Average\\
+	\item \textbf{Moving Average}\\
 	Describes the impact of a random shock from one observation to the next.
 \end{itemize}
 
@@ -107,7 +108,7 @@ To get a comparable evaluation to the linear regression, we applied the model on
 
 \begin{figure}[h]
   \centering
-  \includegraphics[width=0.88\linewidth]{external_content/graphs/final_arima_forecast.png}
+  \includegraphics[width=0.9\linewidth]{external_content/graphs/final_arima_forecast.png}
   \captionsetup{justification=centering}
   \captionof{figure}{ARIMA forecast of item \texttt{5822}}
   \label{fig:arima_forecast}
