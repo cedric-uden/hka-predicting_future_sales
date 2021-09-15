@@ -16,6 +16,8 @@ This was used to predict the sales of the upcoming months from individual items 
 
 == 🛠 Set-Up
 
+=== Environment
+
 The environment is managed with https://anaconda.org[conda] and was built on python {python_version}.
 
 The packages are managed using https://python-poetry.org[poetry].
@@ -36,6 +38,15 @@ Finally, navigate to the GitHub repository root folder, then execute following l
 ```
 poetry install
 ```
+
+=== Datasets
+
+The datasets provided by the Kaggle competition need to be downloaded to their respective folders. Check the folder
+content for further information.
+
+xref:data/info/.[info data folder]
+
+xref:data/technical/.[technical data folder]
 
 == 𝌞 Contents
 
