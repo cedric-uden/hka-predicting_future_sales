@@ -13,6 +13,29 @@
 The goal of this research project was to utilize the "Future Sales" dataset from the Kaggle competition https://www.kaggle.com/c/competitive-data-science-predict-future-sales[Predict Future Sales].
 This was used to predict the sales of the upcoming months from individual items across selected branches spread across the country.
 
+== 🛠 Set-Up
+
+The environment is managed with https://anaconda.org[conda] and was built on python {python_version}.
+
+The packages are managed using https://python-poetry.org[poetry].
+
+To get started, https://docs.conda.io/projects/continuumio-conda/en/latest/user-guide/install/index.html#system-requirements[install conda] and create a new environment and activate it using following code:
+[subs="+attributes"]
+```
+conda create --name {conda_env_name} python={python_version}
+conda activate {conda_env_name}
+```
+
+Then, begin by installing `poetry`:
+```
+conda install poetry
+```
+
+Finally, navigate to the GitHub repository root folder, then execute following line to install all packages:
+```
+poetry install
+```
+
 == 𝌞 Contents
 
 === Research notebooks
@@ -54,29 +77,6 @@ Contains xref:src/plotting/Defaults.py[default] file to set default styles to ma
 
 - xref:.gitignore[`.gitignore`] managing the repository
 - xref:poetry.lock[] & xref:pyproject.toml[] to manage the environment and packages for the project
-
-== 🛠 Set-Up
-
-The environment is managed with https://anaconda.org[conda] and was built on python {python_version}.
-
-The packages are managed using https://python-poetry.org[poetry].
-
-To get started, https://docs.conda.io/projects/continuumio-conda/en/latest/user-guide/install/index.html#system-requirements[install conda] and create a new environment and activate it using following code:
-[subs="+attributes"]
-```
-conda create --name {conda_env_name} python={python_version}
-conda activate {conda_env_name}
-```
-
-Then, begin by installing `poetry`:
-```
-conda install poetry
-```
-
-Finally, navigate to the GitHub repository root folder, then execute following line to install all packages:
-```
-poetry install
-```
 
 == ⚠️ Troubleshooting
 
